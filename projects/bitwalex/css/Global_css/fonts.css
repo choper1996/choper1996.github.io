@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Vollkorn';
+    src:url('../../fonts/Vollkorn/Vollkorn-Regular.eot'),
+        url('../../fonts/Vollkorn/Vollkorn-Regular.eot') format('embedded-opentype'),
+        url('../../fonts/Vollkorn/Vollkorn-Regular.woff2') format('woff2'),
+        url('../../fonts/Vollkorn/Vollkorn-Regular.woff') format('woff'),
+        url('../../fonts/Vollkorn/Vollkorn-Regular.ttf') format('truetype'),
+        url('../../fonts/Vollkorn/Vollkorn-Regular.svg') format('svg');
+}
+@font-face {
+    font-family: 'Manrope';
+    src:url('../../fonts/Manrope/Manrope-Thin.eot'),
+        url('../../fonts/Manrope/Manrope-Thin.eot') format('embedded-opentype'),
+        url('../../fonts/Manrope/Manrope-Thin.woff2') format('woff2'),
+        url('../../fonts/Manrope/Manrope-Thin.woff') format('woff'),
+        url('../../fonts/Manrope/Manrope-Thin.ttf') format('truetype'),
+        url('../../fonts/Manrope/Manrope-Thin.svg') format('svg');
+}

@@ -1,0 +1,139 @@
+/*GLOBAL*/
+/*dark blue: #212b58 */
+/*light blue: #2abafe */
+@import url(Global_css/reset.css);
+@import url(Global_css/container.css);
+p,a,span,ul{
+	font-family: 'Futura';
+	line-height: 125%;
+	color: #015673;
+}	
+p{font-size: 20px;}
+h1{
+	font-family: 'Garamond';
+	line-height: 125%;	
+}
+body{
+	padding-top: 70px;
+	position: relative;
+	background-image: url(../images/personal_account/bg_main.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+button{
+	position: relative;
+	cursor: pointer;
+	font-family: 'Futura';
+	color: #fff;
+	margin: 0px;
+	border: 0px;
+	padding: 10px;
+	background-color: #015673;
+	border-radius: 5px;
+	font-size: 20px;
+}
+img{display: block;}
+/*HEADER*/
+header{
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #fff;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+}
+nav a{
+	position: relative;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	font-size: 22px;
+}
+nav a:before{
+	background-color: #015673;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	content: '';
+	width: 0px;
+	height: 1px;
+	transition: 0.3s;
+}
+.area{
+	border-radius: 5px;
+	padding: 20px;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.36);
+	-moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.36);
+	box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.36);
+}
+nav a:hover:before{width: 100%;}
+/*GLOBAL_WALLET*/
+.global_wallet .container{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.global_wallet p{margin-bottom: 20px}
+.global_wallet span{color: #000}
+/*SALE*/
+.btns_area{
+	margin-bottom: 20px;
+	display: flex;
+	padding: 20px;
+}
+.btns_area button{
+	margin-right: 20px;
+	width: 100%;
+}
+.last_btn{
+	margin-right: 0px!important;
+}
+.faq_title{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.questions_list{
+	margin-bottom: 20px;
+}
+.questions_list span{
+	text-decoration: underline;
+}
+.submit_area{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.submit_area button{
+	width: 300px;
+}
+textarea{
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	width: 100%;
+	min-height: 200px;
+}
+@media screen and (max-width: 768px){
+	.btns_area{
+		flex-wrap: wrap;
+	}
+	.btns_area button{
+		width: 100%;
+		margin-right: 0px;
+		margin-bottom: 10px;
+	}
+	.last_btn{margin-bottom: 0px!important;}
+	.submit_area{
+		flex-direction: column;
+	}
+	.submit_area p{
+		margin-bottom: 10px;
+	}
+	.submit_area button{
+		width: 100%;
+	}
+}

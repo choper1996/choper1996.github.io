@@ -1,0 +1,325 @@
+/*GLOBAL*/
+/*dark blue: #212b58 */
+/*light blue: #2abafe */
+@import url(Global_css/reset.css);
+@import url(Global_css/container.css);
+p,a,span,ul{
+	font-family: 'Futura';
+	line-height: 125%;
+	color: #015673;
+}	
+p{font-size: 20px;}
+h1{
+	font-family: 'Garamond';
+	line-height: 125%;	
+}
+body{
+	padding-top: 70px;
+	position: relative;
+	background-image: url(../images/personal_account/bg_main.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+button{
+	position: relative;
+	cursor: pointer;
+	font-family: 'Futura';
+	color: #fff;
+	margin: 0px;
+	border: 0px;
+	padding: 10px;
+	background-color: #015673;
+	border-radius: 5px;
+}
+img{display: block;}
+/*HEADER*/
+header{
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #fff;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+}
+nav a{
+	position: relative;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	font-size: 22px;
+}
+nav a:before{
+	background-color: #015673;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	content: '';
+	width: 0px;
+	height: 1px;
+	transition: 0.3s;
+}
+.area{
+	border-radius: 5px;
+	padding: 20px;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.36);
+	-moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.36);
+	box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.36);
+}
+nav a:hover:before{width: 100%;}
+.tab_wrap button{
+	margin-right: 10px;
+	min-width: 100px;
+	font-size: 25px;
+	border-radius: 5px 5px 0px 0px;
+	transition: 0.3s;
+}
+.tab_wrap button[name="active"]{
+	background-color: #fff;
+	color: #015673;
+	-webkit-box-shadow: 0px -3px 15px 0px rgba(50, 50, 50, 0.36);
+	-moz-box-shadow:    0px -3px 15px 0px rgba(50, 50, 50, 0.36);
+	box-shadow:         0px -3px 15px 0px rgba(50, 50, 50, 0.36);
+}
+.tab_wrap button[name="active"]:before{
+	position: absolute;
+	width: 100%;
+	height: 6px;
+	background-color: #fff;
+	content: '';
+	left: 0;
+	bottom: -4px;
+}
+/*GLOBAL_WALLET*/
+.global_wallet .container{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.global_wallet p{margin-bottom: 20px}
+.global_wallet span{color: #000}
+/*SALE*/
+.sale_progres_wrap{
+	display: flex;
+	margin-bottom: 20px;
+}
+.sale_progres_wrap .area{
+	text-align: center;
+	width: 100%;
+}
+.stages_area{
+	margin-right: 20px;
+}
+.sale_area{
+	border-radius: 0px 0px 5px 5px!important;
+}
+.stages_area > p, .collect_area > p{
+	margin-bottom: 20px;
+}
+.progress_bar{
+	display: flex;
+	position: relative;
+	width: 100%;
+	background-color: #626262;
+	height: 2px;
+}
+.progress_line{
+	position: absolute;
+	left: 0;
+	top: -1px;
+	width: 30%;
+	height: 4px;
+	background: #015673;
+}
+.progres_stages_items{
+	display: block;
+	height: 8px;
+	border-right: 2px solid #626262;
+	width: 33.3%;
+	margin-top: -3px;
+	z-index: 3;
+}
+.top_progres_lable_wrap{
+	display: flex;
+	margin-bottom: 10px;
+}
+.bot_progres_lable_wrap{
+	display: flex;
+	margin-top: 10px;
+}
+.progres_lable_items{
+	width: 100%;
+	text-align: center;
+}
+.stages_area .bot_progres_lable_wrap .progres_lable_items{
+	width: 33%;
+}
+.course_wrap, .calculate_wrap{
+	display: flex;
+	padding: 10px;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.course_wrap {
+	justify-content: space-between;
+}
+.course_wrap p {
+  	font-size: 30px;
+  	text-transform: uppercase;
+}
+.calculate_left_col{
+	width: 100%;
+}
+.calculate_progres{
+	align-items: center;
+	display: flex;
+}
+.calculate_progres p{
+	margin-right: 20px;
+}
+.calculate_right_col{
+	display: flex;
+	align-items: flex-end;
+}
+.calculate_right_col p{
+	text-align: right;
+	width: 300px;
+}
+.calc_value_wrap{
+	margin-top: 20px;
+	display: flex;
+}
+.calc_value_items{
+	width: 100%;
+	text-align: center;
+}
+.calc_value_center{
+	display: flex;
+	align-items: flex-end;
+}
+.calc_value_center img{
+	width: 30px;
+	margin: 0px 20px 15px 20px;
+}
+.courency_value, .tokens_value{
+	background-color: #dddddd;
+	padding: 10px;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+.timer_wrap{
+	display: flex;
+	align-items: center;
+}
+.timer_area{
+	width: 450px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.timer_title{
+	margin-bottom: 20px;
+	width: 450px;
+	text-align: center;
+}
+.timer_area_items{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	height: 90px;
+	width: 90px;
+}
+.timer_break_item{
+	display: none;
+	height: 20px;
+	width: 100%;
+}
+.timer_area_items:after{
+	position: absolute;
+	content: ':';
+	top: 0;
+	right: -15px;
+	height: 100%;
+	width: 5px;
+	font-size: 35px;
+	display: flex;
+	align-items: center;
+	color: 	#015673;
+}
+.timer_numbers{
+	display: block;
+	color: #015673;
+	font-size: 35px!important;
+}
+.timer_last_item:after{content: '';}
+.timer_wrap button{
+	margin: 0px 20px;
+	width: 100%;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 992px){
+	.sale_progres_wrap{
+		flex-wrap: wrap;
+	}
+	.stages_area{
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 768px){
+	.tab_wrap{
+		background-color: #fff;
+	}
+	.tab_wrap button{
+		border-radius: 0;
+		color: #015673;
+		background-color: #fff;
+		text-align: left;
+		width: 100%;
+	}
+	.tab_wrap button[name="active"]{
+		border-left: 4px solid #015673;
+		background-color: #fff;
+		-webkit-box-shadow: none;
+		-moz-box-shadow:    none;
+		box-shadow:         none;
+	}
+	.calculate_wrap{
+		flex-wrap: wrap;
+	}
+	.calculate_right_col{
+		margin-top: 10px;
+		display: block;
+		width: 100%;
+	}
+	.calculate_right_col p{
+		text-align: center;
+		width: 100%;
+	}
+	.timer_wrap{
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	@media screen and (max-width: 576px){
+		.timer_break_item{
+			display: block;
+		}
+		.timer_area_items:after{
+			display: none;
+		}
+		.timer_area{
+			width: 100%!important;
+			margin: 0px;
+		}
+		.timer_title{
+			width: 100%;
+		}
+	}
+}

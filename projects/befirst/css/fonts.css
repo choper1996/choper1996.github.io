@@ -1,0 +1,27 @@
+/*@font-face {
+    font-family: 'Lion';
+    src:url('../fonts/LionandHare-Italic.svg'),
+        url('../fonts/LionandHare-Italic.eot') format('embedded-opentype'),
+        url('../fonts/LionandHare-Italic.woff2') format('woff2'),
+        url('../fonts/LionandHare-Italic.woff') format('woff'),
+        url('../fonts/LionandHare-Italic.ttf') format('truetype'),
+        url('../fonts/LionandHare-Italic.svg') format('svg');
+}*/
+@font-face {
+    font-family: 'Akzidenc';
+    src:url('../fonts/Akzidenc.eot'),
+        url('../fonts/Akzidenc.eot') format('embedded-opentype'),
+        url('../fonts/Akzidenc.woff2') format('woff2'),
+        url('../fonts/Akzidenc.woff') format('woff'),
+        url('../fonts/Akzidenc.ttf') format('truetype'),
+        url('../fonts/Akzidenc.svg') format('svg');
+}
+@font-face {
+    font-family: 'TTDrugs';
+    src:url('../fonts/TTDrugs-Thin.svg'),
+        url('../fonts/TTDrugs-Thin.eot') format('embedded-opentype'),
+        url('../fonts/TTDrugs-Thin.woff2') format('woff2'),
+        url('../fonts/TTDrugs-Thin.woff') format('woff'),
+        url('../fonts/TTDrugs-Thin.ttf') format('truetype'),
+        url('../fonts/TTDrugs-Thin.svg') format('svg');
+}

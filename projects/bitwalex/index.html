@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+	<title>Bitwallex</title>
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- <link rel="icon" href="images/Logo_fav.png"/> -->
+	<link rel="stylesheet" href="css/Script_css/slick-theme.css">
+	<link rel="stylesheet" href="css/Script_css/slick.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300&amp;subset=cyrillic" rel="stylesheet">
+	<link href="css/index.css" type="text/css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/adaptiv_menu.js"></script>
+</head>
+<body>
+<!-- NAVIGATION -->
+<header>
+	<div class="container">
+		<img class="nav_logo" src="images/Logo_string.png" alt="Bitwallex">
+		<h1 class="header_logo_mobile"></h1>
+		<div class="nav_burger">
+			<div>
+				<span></span>
+			</div>
+		</div>
+		<nav>
+			<a class="first_nav nav_links" onclick="slowScroll('.description')">О проекте</a>
+			<a class="nav_links" onclick="slowScroll('.faq')">FAQ</a>
+			<a class="nav_links" onclick="slowScroll('.economic')">Экономика</a>
+			<a class="nav_links" onclick="slowScroll('.documentation')">Документация</a>
+			<a class="nav_links" onclick="slowScroll('.road_map')">Roadmap</a>
+			<a class="nav_links" onclick="slowScroll('.team')">Команда</a>
+			<a class="nav_links" onclick="slowScroll('.media')">СМИ</a>
+			<div class="nav_lang_wrap">
+				<a class="nav_lang"><span>EN</span></a>
+				<div class="lang_list">
+					<a>EN</a>
+					<a>RU</a>
+				</div>
+			</div>
+			<a class="nav_signin">Вход</a>
+		</nav>
+	</div>
+</header>
+<!-- MAIN -->
+<main class="dark">
+	<div id='stars2'></div>
+	<div id='stars3'></div>
+	<div class="container">
+		<div class="columns">
+			<h1 class="title">Децентрализованная <br> биржа с поддержкой <br> искусственного интеллекта</h1>
+			<div class="main_btns_area">
+				<a class="main_btns main_inv_btn">Инвестировать</a>
+				<a class="main_btns main_watch_btn">Смотреть видео</a>
+			</div>
+			<div class="main_documents_area">
+				<a href="">
+					<img src="images/Document.svg" alt="document">
+					<p>Скачать White-paper</p>
+					<span>pdf</span>
+				</a>
+				<a href="">
+					<img src="images/Document.svg" alt="document">
+					<p>Скачать презентацию</p>
+					<span>pdf</span>
+				</a>
+			</div>
+		</div>
+		<div class="columns second_column">
+			<img src="images/reverse.png" class="calc_reverse" alt="reverse">
+			<div class="numbers_box">
+				<p class="numbers_box_titles">Калькулятор</p>
+				<div class="calculate_area">
+					<div>
+						<p>Ваша сумма и валюта</p>
+						<div class="input_area">
+							<input class="courency_input" type="number">
+							<div class="courency_list_btn">
+								<span>ETH</span>
+								<img src="images/dawn_blue.svg" alt="down">
+							</div>
+						</div>
+						<div class="input_area courency_list">
+							<p>ETH</p>
+							<p>BTC</p>
+						</div>
+					</div>
+					<div class="second_calc_column">
+						<p>Количество токенов</p>
+						<div class="input_area">
+							<p class="calc_cost"></p>
+						</div>
+
+					</div>
+				</div>
+				<p class="numbers_box_titles">Сборы закончатся через:</p>
+				<div class="timer_area">
+					<div class="timer_area_items">
+						<span id="days" class="timer_numbers"></span>
+						<p>Дня</p>
+					</div>
+					<div class="timer_area_items timer_second_item">
+						<span id="hours" class="timer_numbers"></span>
+						<p>Часов</p>
+					</div>
+					<div class="timer_break_item"></div>
+					<div class="timer_area_items">
+						<span id="minutes" class="timer_numbers"></span>
+						<p>Минут</p>
+					</div>
+					<div class="timer_area_items timer_last_item">
+						<span id="seconds" class="timer_numbers"></span>
+						<p>Секунд</p>
+					</div>
+				</div>
+				<p class="numbers_box_titles">Собрано:</p>
+				<div class="colect_area">
+					<div class="progres_bar">
+						<div class="progres_line"></div>
+					</div>
+					<div class="colect_txt_area">
+						<p>2345678 ETH</p>
+						<p>552567868 ETH</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<!-- SPONSORS -->
+<!-- <section class="sponsors">
+	<div class="container">
+		<div class="after_title_area">
+			<div class="line"></div> 
+			<p>Спонсоры</p>
+		</div>
+		<div class="sponsors_wrap">
+			<a href=""><img src="images/Sponsors/sponsors_1.png" alt="sponsors_logo"></a>
+			<a href=""><img src="images/Sponsors/sponsors_2.png" alt="sponsors_logo"></a>
+			<a href=""><img src="images/Sponsors/sponsors_3.png" alt="sponsors_logo"></a>
+			<a href=""><img src="images/Sponsors/sponsors_4.png" alt="sponsors_logo"></a>
+			<a href=""><img src="images/Sponsors/sponsors_1.png" alt="sponsors_logo"></a>
+			<a href=""><img src="images/Sponsors/sponsors_2.png" alt="sponsors_logo"></a>
+			<a href=""><img src="images/Sponsors/sponsors_3.png" alt="sponsors_logo"></a>
+		</div>
+	</div>
+</section> -->
+<!-- DESCRIPTION -->
+<section class="description">
+	<div class="container">
+		<div class="after_title_area">
+			<div class="line"></div> 
+			<p>Как работает биржа?</p>
+		</div>
+		<h1 class="title">Биржа с поддержкой AI</h1>
+		<div class="description_wrap">
+			<div class="columns">
+				<p class="txt">
+					<span class="description_numbers">1. </span>
+					Пассивный доход - По итогам ICO, инвесторы проекта - наделяются возможностью получать пассивный доход на всем промежутке жизнедеятельности биржи BitWallEx. Ежеквартально биржа  подсчитывает чистую прибыль в ETH и распределяется между инвесторами в зависимости от общей доли. <br>
+					<span class="description_numbers">2. </span>
+					Инвесторы получают бонус 20% на этапе Pre Sale.
+				</p>
+			</div>
+			<div class="columns second_column">
+				<img src="images/video_bg.png" alt="video">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- SLIDER -->
+<section class="slider_area dark">
+	<div class="container">
+		<div class="slider">
+			<div class="slide slide_1">
+				<div class="slide_wrap">
+					<div class="slide_txt_area">
+						<div class="after_title_area">
+							<div class="line"></div> 
+							<p>Почему стоит выбрать нас?</p>
+						</div>
+						<h1 class="title">Искуственный интелект</h1>
+						<p class="txt">Биржа BitWallEx работает на базе искусственного интеллекта, основным преимуществом которого является возможность самообучения. Используя статистические данные ИИ проводит анализ лучших практик пользователя. Запоминая частоту и алгоритм определенных действий пользователя, будь то купля определенной валюты при определенном курсе или ее продажа, в дальнейшем BitWallEx (AI) будет способна без постороннего участия давать советы пользователю.</p>
+					</div>
+					<img class="slide_item_img" src="images/slide1_item.png" alt="sponsors_logo">
+				</div>
+			</div>
+			<div class="slide slide_2">
+				<div class="slide_wrap">
+					<div class="slide_txt_area">
+						<div class="after_title_area">
+							<div class="line"></div> 
+							<p>Почему стоит выбрать нас?</p>
+						</div>
+						<h1 class="title">Безопасность</h1>
+						<p class="txt">Система безопасности представляет собой создание огромного количества более мелких кошельков,  в симбиозе составляющий один большой. Каждый из них будет контролироваться определенной группой серверов, а в совокупности составляя часть ключа. Для удобства пользования биржей будет применена двухуровневая верификация.</p>
+					</div>
+					<img class="slide_item_img" src="images/slide1_item.png" alt="sponsors_logo">
+				</div>
+			</div>
+			<div class="slide slide_3">
+				<div class="slide_wrap">
+					<div class="slide_txt_area">
+						<div class="after_title_area">
+							<div class="line"></div> 
+							<p>Почему стоит выбрать нас?</p>
+						</div>
+						<h1 class="title">Smart Futures</h1>
+						<p class="txt">Smart Futures - инструмент купли-продажи криптовалюты, при заключении которого стороны договариваются о сроках и цене. Остальные параметры актива, оговорены заранее в спецификации и являются стандартными для нашей торговой площадки (сроки, исполнитель и пр). Стороны несут обязательства перед биржей вплоть до исполнения SmartFutures. Существует возможность продажи и перепродажи данного договора. Биржа выступает агентом между двумя заинтересованными,  желающими заключить SmartFutures. </p>
+					</div>
+					<img class="slide_item_img" src="images/slide1_item.png" alt="sponsors_logo">
+				</div>
+			</div>
+			<div class="slide slide_4">
+				<div class="slide_wrap">
+					<div class="slide_txt_area">
+						<div class="after_title_area">
+							<div class="line"></div> 
+							<p>Почему стоит выбрать нас?</p>
+						</div>
+						<h1 class="title">Support</h1>
+						<p class="txt">В основе нашей биржи лежит незамедлительный ответ на все интересующие вопросы, возникшие в ходе работы с платформой. Это реализуется благодаря детально проработанной системе FAQ и штатным сотрудникам техподдержки, готовым всегда прийти на помощь.</p>
+					</div>
+					<img class="slide_item_img" src="images/slide1_item.png" alt="sponsors_logo">
+				</div>
+			</div>
+			<div class="slide slide_5">
+				<div class="slide_wrap">
+					<div class="slide_txt_area">
+						<div class="after_title_area">
+							<div class="line"></div> 
+							<p>Почему стоит выбрать нас?</p>
+						</div>
+						<h1 class="title">Интерфейс</h1>
+						<p class="txt">Мы учитываем особенности каждого из пользователей, поэтому разработали адаптивный интерфейс, позволяющий работать с биржей удобно и быстро. Каждому пользователю предлагается заложенный настройками интерфейс, но при этом каждый пользователь сможет вносить изменения в строение рабочего стола биржи (перенося и меняя местами блоки на рабочем стол) под себя и свои нужды. </p>
+					</div>
+					<img class="slide_item_img" src="images/slide1_item.png" alt="sponsors_logo">
+				</div>
+			</div>
+			<div class="slide slide_6">
+				<div class="slide_wrap">
+					<div class="slide_txt_area">
+						<div class="after_title_area">
+							<div class="line"></div> 
+							<p>Почему стоит выбрать нас?</p>
+						</div>
+						<h1 class="title">Система обучения</h1>
+						<p class="txt">На криптовалютной бирже BitWallEx будет доступна система обучения. Данная система предусмотрена для обучения новичков и повышения эффективности взаимодействия с интерфейсом биржи и доступными возможностями.</p>
+					</div>
+					<img class="slide_item_img" src="images/slide1_item.png" alt="sponsors_logo">
+				</div>
+			</div>
+			<div class="slide slide_7">
+				<div class="slide_wrap">
+					<div class="slide_txt_area">
+						<div class="after_title_area">
+							<div class="line"></div> 
+							<p>Почему стоит выбрать нас?</p>
+						</div>
+						<h1 class="title">15 языков</h1>
+						<p class="txt">Bitwallex - биржа объединяющая людей разных национальностей. Наша платформа поддерживает 15 языков (английский, русский, китайский, японский, корейский, испанский, немецкий, французкий, португальский, индонезийский, вьетнамский, арабский, итальянский, нидерландский, филипинский).</p>
+					</div>
+					<img class="slide_item_img" src="images/slide1_item.png" alt="sponsors_logo">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- FAQ -->
+<section class="faq">
+	<div class="container">
+		<div class="after_title_area">
+			<div class="line"></div> 
+			<p>Часто задаваемые вопросы</p>
+		</div>
+		<h1 class="title">Ответы на вопросы</h1>
+		<div class="globalslide_btns_area">
+			<div class="globalslide_btns prev_faq_btn">
+				<img src="images/white_slide_arrow.png" alt="">
+				<img src="images/blue_slide_arrow.png" class="globalslide_btns_hover_arrows" alt="">
+			</div>
+			<p><span class="slide_number">1</span> из 2</p>
+			<div class="globalslide_btns next_faq_btn">
+				<img src="images/white_slide_arrow.png" alt="">
+				<img src="images/blue_slide_arrow.png" class="globalslide_btns_hover_arrows" alt="">
+			</div>
+		</div>
+		<!-- questions_area_1 -->
+		<div class="questions_area q_1" name="active">
+			<!-- Question_1 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>1. Что такое BitWallEx? </p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">«BitWallEx» представляет собой крипто-биржу нового поколения для Трейдеров, ICO проектов и Инвесторов с высоким и средним доходом, которые хотят максимальное качество обслуживания с возможностью заработка.</p>
+			</div>
+			<!-- Question_2 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>2. Как работает торговля при поддержке ИИ?</p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Биржа BitWallEx работает на базе искусственного интеллекта, основным преимуществом которой является возможность самообучения, за счет чего, внедрение в систему Bitwallex, дает возможность каждому пользователю обучать и пользоваться ею. Запоминая частоту и алгоритм определенных действий пользователя, будь то купля определенной валюты при определенном курсе или ее продажа, в дальнейшем BitWallEx (AI) будет способна без постороннего участия давать советы пользователю.</p>
+			</div>
+			<!-- Question_3 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>3. Что такое Smart Futures?</p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Smart Futures - инструмент купли-продажи криптовалюты, при заключении которого стороны договариваются о сроках и цене. Остальные параметры актива, оговорены заранее в спецификации и являются стандартными для нашей торговой площадки (сроки, исполнитель и пр).</p>
+			</div>
+			<!-- Question_4 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>4. Чем BitWallEx отличается от других бирж?</p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Таблица</p>
+			</div>
+			<!-- Question_5 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>5. Какая выгода от участия в ICO BitWallEx?</p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Инвестируя в наш проект вы получаете не просто наши монеты – вы становитесь частью будущего, которое начинается сегодня. Мы верим, что наш проект станет самым быстрым, удобным и безопасным среди бирж, которые существуют сейчас. <br>
+					<br>
+					С нашими токенами вы можете: <br>
+					1. Пожизненный пассивный доход для инвесторов ICO; <br>
+					2. Оплатить комиссию на нашей бирже; <br>
+					3. Принять участие в голосовании за листинг новой монеты; <br>
+					4. Продать их на бирже. <br>
+					<br>
+					Подробнее вы можете прочитать в White Paper.
+
+				</p>
+			</div>
+			<!-- Question_6 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>6. Как я могу стать участником ICO? </p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Для получения возможности инвестирования в проект BitWallEx вам нужно нажать на кнопку «Инвестировать» на сайте ICO (ВСТАВИТЬ ССЫЛКУ). Далее вам нужно будет пройти процедуру регистрации в нашем личном кабинете (Email, пароль, подтверждение пароля, ETH кошелек для получения токенов). <br>
+					<br>ОБРАТИТЕ ВНИМАНИЕ: ETH кошелек должен быть создан на Myetherwallet/Mist и т.п. Это не должен быть кошелек биржи, обменника (в этом случае мы не сможем отправить ваши токены). Кошелек с которого вы инвестируете и на который планируете получать токены - может отличаться. <br>
+					<br>
+					После прохождения регистрации и подтверждения вашего E-mail адреса - вы сможете авторизоваться в личном кабинете, в котором получите возможность увидеть калькулятор, который поможем вам узнать, сколько токенов вы получите в зависимости от объема ваших инвестиций. <br>
+					<br>
+					После определения суммы инвестиций - вы нажимаете кнопку “Buy”, после нажатия которой генерируется ваш индивидуальный кошелек в выбранной ранее валюте, на который вы сможете отправить ваши криптоактивы. <br>
+					<br>
+					После совершения перевода на сгенерированный кошелек, по итогам этапа ICO на котором вы инвестировали, токены WALL будут отправлены на ваш ETH кошелек, который был введен вами ранее на этапе регистрации в личном кабинете. 
+					</p>
+			</div>
+			<p class="global_answer"></p>
+		</div>
+		<!-- questions_area_2 -->
+		<div class="questions_area q_2" name="unactive">
+			<!-- Question_7 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>7. Сроки проведения ICO и бонусы</p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Таблица</p>
+			</div>
+			<!-- Question_8 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>8. Как я могу принять участие в Bounty программе? </p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Для участия в Bounty программе BitWallEx пройдите регистрацию на сайте Bounty Hunter: <a target="blank" href="https://bountyhunter.club/?act=registration">https://bountyhunter.club/?act=registration</a> на котором вы сможете поучаствовать в нашей программе и получить вознаграждения за рекламные действия.</p>
+			</div>
+			<!-- Question_9 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>9. Роль токена</p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Токен WALL - это платежное средство, которое можно обменивать, продавать и покупать, использовать в самых разных ситуациях: <br>
+					<br>
+					Пассивный пожизненный доход для инвесторов ICO; <br>
+					Частичная оплата комиссии за транзакции на бирже BitWallEx; <br>
+					Голосования, для держателей токенов, за листинг на биржу перспективных ICO проектов. <br>
+					<br>
+					А также для покупки/продажи через биржу BitWallEX и нескольких других децентрализованных бирж.</p>
+			</div>
+			<!-- Question_10 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>10. Юрисдикция  </p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Эстония</p>
+			</div>
+			<!-- Question_11 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>11. Будет ли ваш токен торговаться на других биржах?</p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">Да, токен BitWallEx (WALL) будет торговаться на бирже BitWallEx и на нескольких других децентрализованных биржах.</p>
+			</div>
+			<!-- Question_12 -->
+			<div class="qustions_items" name="">
+				<div class="qustions_bg"></div>
+				<p>12. Как я могу связаться с вами? </p>
+				<div class="down_area">
+					<img class="dawn_img_deafult"  src="images/dawn_blue.svg" alt="down">
+					<img class="dawn_img_active" src="images/down_white.svg" alt="down">
+				</div>
+				<p class="answer">По всем вопросам - пишите на нашу электронную почту: press@bitwallex.io</p>
+			</div>
+			<p class="global_answer"></p>
+		</div>
+	</div>
+</section>
+<!-- ECONOMIC -->
+<section class="economic dark"> 
+	<div class="container">
+		<div class="after_title_area">
+			<div class="line"></div> 
+			<p>Распределение</p>
+		</div>
+		<h1 class="title">Экономика проекта</h1>
+		<div class="economic_wrap">
+			<div class="columns">
+				<p>Распределение привлеченных инвестиций</p>
+				<div class="economic_circle">
+					<img class="economic_diagram" src="images/circle_diagram_1.png" alt="diagram">
+					<h1>45%</h1>
+					<p>маркетинг</p>
+				</div>
+				<div class="economic_list_items">
+					<div class="circle blue"></div>
+					<p>35% тех. поддержка</p>
+				</div>
+				<div class="economic_list_items">
+					<div class="circle purple"></div>
+					<p>45% маркетинг</p>
+				</div>
+				<div class="economic_list_items">
+					<div class="circle green"></div>
+					<p>10% команда</p>
+				</div>
+				<div class="economic_list_items">
+					<div class="circle yellow"></div>
+					<p>10% юр. сопровождение</p>
+				</div>
+			</div>
+			<div class="columns second_column">
+				<p>Распределение токенов:</p>
+				<div class="economic_circle">
+					<img class="economic_diagram" src="images/circle_diagram_2.png" alt="diagram">
+					<h1>80%</h1>
+					<p>ico</p>
+				</div>
+				<div class="economic_list_items">
+					<div class="circle blue"></div>
+					<p>80% ICO</p>
+				</div>
+				<div class="economic_list_items">
+					<div class="circle purple"></div>
+					<p>15% команда и сопровождение</p>
+				</div>
+				<div class="economic_list_items">
+					<div class="circle green"></div>
+					<p>5% bounty</p>
+				</div>
+				<p class="economic_list_last_item">Всего: 1 000 000 000 токенов <br> Эмиссии ограничены</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- VIDEO -->
+<section class="video">
+	<div class="container">
+		<div class="after_title_area">
+			<div class="line"></div> 
+			<p>Видео</p>
+		</div>
+		<h1 class="title">Видео</h1>
+		<div class="video_wrap">
+			<div class="columns">
+				<img src="images/video_bg.png" alt="video">
+				<p>Conversion rate транслирует продуктовый асортимент на инсайдерскую.</p>
+			</div>
+			<div class="columns second_column">
+				<img src="images/video_bg.png" alt="video">
+				<p>Интервью менеджера проектам</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- DOCUMENTATION -->
+<section class="documentation dark">
+	<div class="container">
+		<div class="after_title_area">
+			<div class="line"></div> 
+			<p>Докуметнация</p>
+		</div>
+		<h1 class="title">Докуметнация</h1>
+		<div class="documentaion_wrap">
+			<a class="documents" href="">
+				<img src="images/Document.svg" alt="document">
+				<p>white-paper</p>
+			</a>
+			<a class="documents" href="">
+				<img src="images/Document.svg" alt="document">
+				<p>legal opinion</p>
+			</a>
+			<a class="documents" href="">
+				<img src="images/Document.svg" alt="document">
+				<p>one pager</p>
+			</a>
+			<a class="documents" href="">
+				<img src="images/Document.svg" alt="document">
+				<p>user agreement</p>
+			</a>
+			<a class="documents" href="">
+				<img src="images/Document.svg" alt="document">
+				<p>lite-paper</p>
+			</a>
+			<a class="documents" href="">
+				<img src="images/Document.svg" alt="document">
+				<p>privacy-policy</p>
+			</a>
+			<a class="documents" href="">
+				<img src="images/Document.svg" alt="document">
+				<p>technical document</p>
+			</a>
+			<a class="documents" href="">
+				<img src="images/Document.svg" alt="document">
+				<p>о компании</p>
+			</a>
+		</div>
+	</div>
+</section>
+<!-- ROADMAP -->
+<section class="road_map"></section>
+<!-- TEAM -->
+<section class="team dark">
+	<div class="container">
+		<div class="after_title_area">
+			<div class="line"></div> 
+			<p>Команда</p>
+		</div>
+		<h1 class="title">Команда</h1>
+		<div class="team_wrap">
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Пргнрамист</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Програмист</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Програмист</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Програмист</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Програмист</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Програмист</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Програмист</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Програмист</p>
+			</div>
+		</div>
+		<div class="after_title_area taeam_second_title">
+			<div class="line"></div> 
+			<p>Эксперты</p>
+		</div>
+		<h1 class="title">Эксперты</h1>
+		<div class="team_wrap">
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Эксперт</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Эксперт</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Эксперт</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Эксперт</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Эксперт</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Эксперт</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Эксперт</p>
+			</div>
+			<div class="team_items">
+				<img src="images/team/test_teammate.png" alt="teammate">
+				<h1>Иван Иванов</h1>
+				<p>Эксперт</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- MEDIA -->
+<section class="media">
+	<div class="container">
+		<div class="after_title_area">
+			<div class="line"></div> 
+			<p>СМИ</p>
+		</div>
+		<h1 class="title">О нас говорят</h1>
+		<div class="globalslide_btns_area">
+			<div class="globalslide_btns prev_media_btn">
+				<img src="images/white_slide_arrow.png" alt="">
+				<img src="images/blue_slide_arrow.png" class="globalslide_btns_hover_arrows" alt="">
+			</div>
+			<p><span class="slide_number">1</span> из 2</p>
+			<div class="globalslide_btns next_media_btn">
+				<img src="images/white_slide_arrow.png" alt="">
+				<img src="images/blue_slide_arrow.png" class="globalslide_btns_hover_arrows" alt="">
+			</div>
+		</div>
+		<!-- media_wrap 1 -->
+		<div class="media_wrap m_1" name="active">
+			<div class="columns">
+				<img class="media_main_img" src="images/test_mdia_item.png" alt="media_item">
+				<div class="media_previev">
+					<img src="images/Forbes_logo.png" alt="media_logo">
+					<p>23 Июля 2018</p>
+				</div>
+				<p class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt harum, corporis necessitatibus excepturi culpa iure, repellendus totam, reprehenderit optio mollitia atque cum ipsam velit quibusdam. Fugit molestias architecto, beatae pariatur.</p>
+			</div>
+			<div class="columns second_column">
+				<img class="media_main_img" src="images/test_mdia_item.png" alt="media_item">
+				<div class="media_previev">
+					<img src="images/Forbes_logo.png" alt="media_logo">
+					<p>23 Июля 2018</p>
+				</div>
+				<p class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quasi quae pariatur rem, quis et omnis quos aspernatur! Vero maxime numquam nihil placeat deleniti distinctio, molestiae suscipit doloribus mollitia pariatur.</p>
+			</div>
+		</div>
+		<!-- media_wrap 2 -->
+		<div class="media_wrap m_2">
+			<div class="columns">
+				<img class="media_main_img" src="images/test_mdia_item.png" alt="media_item">
+				<div class="media_previev">
+					<img src="images/Forbes_logo.png" alt="media_logo">
+					<p>27 Июля 2018</p>
+				</div>
+				<p class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt harum, corporis necessitatibus excepturi culpa iure, repellendus totam, reprehenderit optio mollitia atque cum ipsam velit quibusdam. Fugit molestias architecto, beatae pariatur.</p>
+			</div>
+			<div class="columns second_column">
+				<img class="media_main_img" src="images/test_mdia_item.png" alt="media_item">
+				<div class="media_previev">
+					<img src="images/Forbes_logo.png" alt="media_logo">
+					<p>27 Июля 2018</p>
+				</div>
+				<p class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quasi quae pariatur rem, quis et omnis quos aspernatur! Vero maxime numquam nihil placeat deleniti distinctio, molestiae suscipit doloribus mollitia pariatur.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- FOOTER -->
+<footer class="dark">
+	<div class="container">
+		<h1 class="title">Bitwallex</h1>
+		<div class="footer_wrap">
+			<div class="footer_items">
+				<h1>Децентраизована биржа с поддержкой ии.</h1>
+				<div class="footer_socials_area">
+					<a target="_blank" href="">
+						<img src="images/social_networks/facebook.png" alt="Facebok">
+					</a>
+					<a target="_blank" href="">
+						<img src="images/social_networks/medium.png" alt="Medium">
+					</a>
+					<a target="_blank" href="">
+						<img src="images/social_networks/telegram.png" alt="Telegram">
+					</a>
+					<a target="_blank" href="">
+						<img src="images/social_networks/twitter.png" alt="twitter">
+					</a>
+				</div>
+			</div>
+			<div class="footer_items second_footer_item">
+				<h1>Связаться</h1>
+				<div>
+					<p>PRESS@BITWALLEX.IO </p>
+					<p>+7 (953) 829 62 72</p>
+				</div>
+			</div>
+			<div class="footer_items third_footer_item">
+				<h1>Подписаться на новости</h1>
+				<div class="footer_input_area">
+					<input type="text" placeholder="Введите ваш email">
+					<button class="footer_submit">GO</button>
+				</div>
+			</div>
+		</div>
+		<p class="footer_copyright">COPYRIGHT © 2018 BITWALLEX. ALL RIGHTS RESERVED.</p>
+	</div>
+</footer>
+<!-- SCRIPTS -->
+<script> 
+	function slowScroll (id) { 
+		var offset = 0; 
+		$('html, body').animate ({ 
+		scrollTop: $(id).offset ().top - offset 
+		}, 1500); 
+		return false; 
+	} 
+</script>
+</body>
+</html>
