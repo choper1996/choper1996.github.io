@@ -4,13 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BeFirst</title>
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-T8P26NH');</script>
-	<!-- End Google Tag Manager -->
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
@@ -18,9 +11,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	<link rel="icon" href="img/logo_black.png">
-	<!-- Google Tag Manager -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/lang.js"></script>
@@ -29,40 +20,38 @@
 	<script src="js/adaptiv_menu_js.js"></script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P26NH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <!-- NAVIGATION -->
-<header>
+<nav>
 	<div class="container">
-		<img src="img/logo.svg" alt="">
-		<div class="nav_burger">
-			<div>
-				<span></span>
+		<div class="col-3 nav_logo_area">
+			<img src="img/logo.svg" alt="">
+		</div>
+		<div class="nav_right_column">
+			<div class="nav_burger">
+				<div>
+					<span></span>
+				</div>
+			</div>
+			<div class="nav_btns_area">
+				<a href="#footer">Contact</a>
+				<a class="lg_go">Eng</a>
 			</div>
 		</div>
-		<nav>
-			<a class="first_nav" href="#footer" onclick="slowScroll('#footer')">Contact</a>
-			<a class="lg_go">Eng</a>
-		</nav>
 	</div>
-</header>
+</nav>
 <!-- MAIN -->
 <main>
 	<div class="main_blur"></div>
 	<div class="main_section_1">
-		<div class="container">
-			<a class="main_btns main_btn_1 popup-content" href="#price_form">оставить заявку</a>
-			<a class="main_btns main_btn_2" target="_blank" href="docs/Price-list.pdf">Прайс-лист</a>
-			<a class="main_btns main_btn_3 popup-content" href="#referal_form">Партнерская программа</a>
-		</div>
+		<a class="main_btns main_btn_1 popup-content" href="#price_form">оставить заявку</a>
+		<a class="main_btns main_btn_2" target="_blank" href="docs/Price-list.pdf">Прайс-лист</a>
+		<a class="main_btns main_btn_3 popup-content" href="#referal_form">Партнерская программа</a>
 	</div>
 	<div class="main_section_1_m">
-		<img class="main_mobile_img" src="img/logo_with_words_mobile.png" alt="">
 		<div class="container">
+			<img class="main_mobile_img" src="img/logo_with_words_mobile.png" alt="">
 			<a class="main_btns main_btn_1 popup-content" href="#price_form">оставить заявку</a>
-			<a class="main_btns main_btn_2" target="_blank" href="docs/Price-list.pdf" href="">Прайс-лист</a>
+			<a class="main_btns main_btn_2" target="_blank" href="docs/Price-list.pdf">Прайс-лист</a>
 			<a class="main_btns main_btn_3 popup-content" href="#referal_form">Партнерская программа</a>
 		</div>
 	</div>
@@ -71,7 +60,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="main_section_2_content">  
 				<h1 id="lg_1">Все началось с мечты</h1>
 				<p id="lg_2">
-					Мы мечтали о команде профессионалов: <br> искали людей, программистов, маркетологов <br> и советников, которые помогли бы нам <br> провести ICO на высшем уровне и без ошибок. <br> Это было сложней, чем мы ожидали, поэтому <br> мы сами стали лучшими из лучших.</p>
+					Мы мечтали о команде профессионалов: 
+				<br> искали людей, программистов, маркетологов
+				<br> и советников, которые помогли бы нам 
+				<br> провести ICO на высшем уровне и без ошибок. 
+				<br> Это было сложней, чем мы ожидали, поэтому 
+				<br> мы сами стали лучшими из лучших.</p>
 			</div>
 		</div>
 	</div>
@@ -92,18 +86,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- TEAM -->
 <section class="team">
 	<div class="container">
-		<h1 id="lg_7">Знакомьтесь - команда 
+		<h1 id="lg_7">Знакомьтесь - команда
 		<br> экспертов BeFirst</h1>
 		<div class="team_slider">
 			<div class="slides">
 				<div class="slides_area">
-					<p class="lg_Shavon">Md.Mofassair Hossain - топ-эксперт ICObench, CEO и учредитель Perhalic, инвестор и эдвайзер более чем 18 ICO.</p>
+					<p class="lg_Shavon">Md.Mofassair Hossain - топ-эксперт ICObench, CEO и учредитель Perhalic, инвестор и эдвайзер более чем 18 ICO</p>
 					<img src="img/Adv_Shavon.png" alt="">
 				</div>
 			</div>
 			<div class="slides">
 				<div class="slides_area">
-					<p class="lg_Kim">Daniel Kim - более чем 10 -летний опыт работы в маркетинге и отрасли продаж в Южной Корее и азиатском регионе в целом.</p>
+					<p class="lg_Giovanni">Giovanni Casagrande - Топ-30 Эксперт ICObench, advisor. Специалист в области продвижения проектов. Сооснователь Black Marketing Guru</p>
+					<img src="img/Adv_Giovanni .png" alt="">
+				</div>
+			</div>
+			<div class="slides">
+				<div class="slides_area">
+					<p class="lg_Ali">Ali Kassab - Предприниматель с более чем 20-летним опытом работы в сфере облачного программного обеспечения и цифровых платежей. Известный новатор и энтузиаст</p>
+					<img src="img/Adv_Ali.png" alt="">
+				</div>
+			</div>
+			<div class="slides">
+				<div class="slides_area">
+					<p class="lg_Kim">Daniel Kim - более чем 10 -летний опыт работы в маркетинге и отрасли продаж в Южной Корее и азиатском регионе в целом</p>
 					<img src="img/Adv_Kim.png" alt="">
 				</div>
 			</div>
@@ -113,21 +119,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<img src="img/Adv_Shohel.png" alt="">
 				</div>
 			</div>
+
 			<div class="slides">
 				<div class="slides_area">
-					<p class="lg_Giovanni">Giovanni Casagrande - Топ-50 Эксперт ICObench, advisor. Специалист в области продвижения проектов. Сооснователь Black Marketing Guru.</p>
-					<img src="img/Adv_Giovanni .png" alt="">
-				</div>
-			</div>
-			<div class="slides">
-				<div class="slides_area">
-					<p class="lg_Giacomo">Giacomo Arcaro - ICO эксперт и advisor, сооснователь ICOBooster и Fintech.Review. Специалист в области продвижения проектов.</p>
-					<img class="fix_slider_img" src="img/Adv_Giacomo.png" alt="">
-				</div>
-			</div>
-			<div class="slides">
-				<div class="slides_area">
-					<p class="lg_David">Dr. David Meszaros - Международный  юрист и стратегический консультант для компаний и ICO.</p>
+					<p class="lg_David">Dr. David Meszaros - Международный  юрист и стратегический консультант для компаний и ICO</p>
 					<img src="img/Adv_David.png" alt="">
 				</div>
 			</div>
@@ -291,18 +286,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="hidden">
 	<div id="price_form">
 		<form action="">
+			<div class="close_form_btn">x</div>
 			<p class="lg_f_1">Оставьте Ваши контактные данные. Ваш менеджер с вами свяжется.</p>
 			<div class="inputs_area">
 				<div class="inputs_area_items">
-					<p class="error_data">* Email</p>
-					<input class="lg_f_2" required type="text" placeholder="Введите ваш Email" id="form_email">
+					<p class="error_data">* E-mail</p>
+					<input class="lg_f_2" required type="text" placeholder="Введите ваш E-mail" id="form_email">
 				</div>
 				<div class="inputs_area_items">
-					<p class="lg_f_3">Контактный телефон</p>
-					<input class="lg_f_4" type="text" placeholder="Введите ваш контактный телефон" id="form_phone">
-				</div>
-				<div class="inputs_area_items">
-					<p class="lg_f_5">Телеграмм</p>
+					<p class="lg_f_5">Телеграмм"</p>
 					<input class="lg_f_6" type="text" placeholder="Введите ваш телеграмм логин" id="form_telegram">
 				</div>
 				<div class="inputs_area_items">
@@ -310,33 +302,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<input class="lg_f_6_2" type="text" id="promocod" placeholder="Введите ваш промокод">
 				</div>
 			</div>
-			<input class="lg_f_7" type="submit" value="ОТПРАВИТЬ" id="go_data">
+			<div class="lg_f_7 submit_btn" id="go_data">ОТПРАВИТЬ</div>
 			<p class="lg_send_status"></p>
 		</form>
 	</div>
-
 	<div id="referal_form">
 		<form action="">
-			<p class="lg_f_8">Какие выгоды я получаю, становясь партнером?</p>
+			<div class="close_form_btn">x</div>
+			<p class="lg_f_8 form_title">Какие выгоды я получаю, становясь партнером?</p>
 			<p class="lg_f_9">Зарегистрировавшись в партнерской программе, вы получите личный промокод, которым сможете делиться: ваш друг получит скидку 5% на наши услуги, а вы - вознаграждение в размере 3% от цены услуги, приобретенной вашим знакомым. Таким образом, выгоду получают все! </p>
 			<p class="lg_f_10">Чтобы стать партнером, введите свой email и кодовое слово. Постарайтесь запомнить кодовое слово, ведь оно понадобится вам, чтоб получить вознаграждение.</p>
 			<div class="inputs_area_items">
-				<p class="error_data_1">* Email</p>
+				<p class="error_data_1 error_datas">* Email</p>
 				<input class="lg_f_2" type="text" required placeholder="Введите ваш Email" id="form_email_r">
 			</div>
 			<div class="inputs_area_items">
-				<p class="lg_f_11 error_data_2">* Кодовое слово</p>
-				<input class="lg_f_12" type="text" required placeholder="Придумайте кодовоее слово" id="code_word">
+				<p class="lg_f_11 error_data_2 error_datas">* Кодовое слово</p>
+				<input class="lg_f_12" type="text" required placeholder="Придумайте кодовоее слово" id="code_word" maxlength="20">
 			</div>
 			<div class="check_box_items_area">
+				<p class="lg_f_13 check_txt">Я согласен с условиями <a class="form_doc" target="_blank" href="docs/affiliate_program_ru.pdf">партнерской программы</a></p>
 				<div class="check_box_area">
 					<div class="check_box" name="uncheck">
 						<img src="img/check.svg" alt="">
 					</div>
 				</div>
-				<p class="lg_f_13">Я согласен с условиями <a class="form_doc" target="_blank" href="docs/affiliate_program_ru.pdf">партнерской программы</a></p>
 			</div>
-			<input class="lg_f_7" type="submit" value="Отправить" id="go_data_r">
+			<div class="lg_f_7 submit_btn" id="go_data_r">ОТПРАВИТЬ</div>
 			<p class="lg_send_status"></p>
 		</form>
 	</div>
@@ -351,59 +343,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 	<div class="container footer_row_2">
-		<a target="_blank" href="https://vk.com/befirst_io"><img src="img/SN_vk.svg" alt=""></a>
-		<a target="_blank" href="https://www.facebook.com/befirst.io/"><img src="img/SN_facebook.svg" alt=""></a>
-		<a target="_blank"><img src="img/SN_telegram.svg" alt=""></a>
-		<a target="_blank"><img src="img/SN_instagram.svg" alt=""></a>
-		<a target="_blank"><img src="img/SN_tweeter.svg" alt=""></a>
+		<a target="_blank" href="https://medium.com/@befirst_io"><img src="img/SN_Medium.svg" alt="Medium"></a>
+		<a target="_blank" href="https://www.facebook.com/befirst.io/"><img src="img/SN_facebook.svg" alt="facebook"></a>
+		<!-- <a target="_blank" href="https://twitter.com/BeFirst_io"><img src="img/SN_tweeter.svg" alt="tweeter"></a> -->
 	</div>
 </footer>
-<script> 
-	function slowScroll (id) { 
-		var offset = 0; 
-		$('html, body').animate ({ 
-		scrollTop: $(id).offset ().top - offset 
-		}, 1500); 
-		return false; 
-	} 
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122746779-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-122746779-1');
-</script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter49834963 = new Ya.Metrika2({
-                    id:49834963,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true
-                });
-            } catch(e) { }
-        });
 
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/tag.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks2");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/49834963" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 </body>
 </html>
 

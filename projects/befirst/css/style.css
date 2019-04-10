@@ -1,5 +1,5 @@
 /*GLOBAL*/
-@import url(reset.css)
+@import url(reset.css);
 body{
 	position: relative;
 	padding: 0;
@@ -46,36 +46,30 @@ section{
 	line-height: 125%;
 	color: #fff;
 }
-/*HEADER*/
-header{
-	padding: 10px 0px;
-	position: absolute;
+/*NAV*/
+nav{
+	background-color: #000;
+	z-index: 5;
 	left: 0;
 	top: 0;
 	width: 100%;
-	background-color: #000;
-	z-index: 5;
+	position: absolute;
+
 }
-header .container{
-	position: relative;
+nav .container{
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: space-between;
 }
-header img{
-	width: 25px;
-}
-nav{
-	display: flex;
-}
 nav a{
-	padding:0px 20px;
 	cursor: pointer;
 	font-family: 'Akzidenc'!important;
 	font-size: 20px;
 	display: inline-block;
 	position: relative;
 	color: #fff;
+	height: 50px;
+	line-height: 50px;
 }
 nav a:after{
 	transition: 0.2s;
@@ -90,28 +84,32 @@ nav a:after{
 nav a:hover:after{
 	width: 100%;
 }
+.nav_btns_area{
+	align-items: flex-end;
+	flex-direction: column;
+}
 .nav_burger{
 	display: none;
+	width: 60px;
+	height: 60px;
 }
 @media (max-width: 550px) and (min-width: 0px){
-	.nav_burger{
-		position: absolute;
-		right: 20px;
-		width: 25px;
-		display: block;
-	}
-	nav{
-		display: none;
-		align-items: flex-end;
+	.nav_right_column{
+		display: flex;
 		flex-direction: column;
+		align-items: flex-end;
+		justify-content: flex-end;
 	}
-	nav a{
-		display: block;
-		padding: 6px;
-		text-align: right;
+	.nav_btns_area{
+		display: none;
 	}
-	.first_nav{
-		margin-top: 30px;
+	.nav_burger{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	nav .container{
+		align-items: flex-start;
 	}
 }
 .nav_burger div{
@@ -119,7 +117,8 @@ nav a:hover:after{
 	padding: 0px;
 	display: block;
 	border-radius: 100%;
-	height: 25px;
+	height: 40px;
+	width: 40px;
 	position: relative;
 }
 .nav_burger  span{
@@ -172,6 +171,28 @@ nav a:hover:after{
 .nav_burger_active span::before{
 	transform: rotate(-45deg);
 }
+.nav_logo_area{
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+@media (max-width: 550px) and (min-width: 0px){
+	.nav_logo_area{
+		padding-top: 15px;
+	}
+}
+.nav_logo_area img{
+	width: 25px;
+}
+.nav_btns_area{
+	text-align: right;
+}
+.nav_btns_area a{
+	padding: 0px 20px;
+}
+.hidden{
+	display: none;
+}
 /*MAIN*/
 main{
 	position: relative;
@@ -183,21 +204,10 @@ main{
 	background-position: top center;
 	position: relative;
 	height: 100vh;
-	min-height: 570px;
-}
-.main_section_1 .container{
+	min-height: 500px;
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-	height: 100%;
-}
-@media screen and (max-width: 992px){
-	.main_section_1 .container{
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: center;
-		padding-bottom: 20px;
-	}
 }
 .main_btns{
 	margin: 50px 5px;
@@ -220,6 +230,10 @@ main{
 		clip-path: none;
 		margin: 10px 0px;
 	}
+	.main_section_1 .container{
+		display: flex;
+		flex-direction: column;
+	}
 }
 .main_btns:hover{
 	color: #d75312;
@@ -229,12 +243,20 @@ main{
 	display: none;
 	position: relative;
 	height: 100vh;
-	min-height: 650px;
+	min-height: 500px;
 }
 .main_mobile_img{
 	width: 60%;
 	display: block;
 	margin: 0px auto;
+}
+@media screen and (max-width: 992px){
+	.main_section_1{
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		padding-bottom: 20px;
+	}
 }
 @media (max-width: 600px) and (min-width: 0px){
 	.main_section_1{
@@ -242,20 +264,19 @@ main{
 		background-image: none!important;
 	}
 	.main_section_1_m{
-		padding-top: 100px;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-
-	}
-	.main_section_1_m .container{
-		padding-bottom: 50px;
+		align-items: center;
+		justify-content: center;
 	}
 	.main_section_1_m .main_btns{
 		margin: 15px auto;
 		-webkit-clip-path: none;
 		clip-path: none;
 		width: 200px;
+	}
+	.main_section_1_m .main_btn_1{
+		margin-top: 45px;
 	}
 }
 .main_section_2{
@@ -350,7 +371,12 @@ main{
 .slides_area p{
 	padding-bottom: 20px;
 }
-@media screen and (max-width: 550px){
+@media screen and (max-width: 761px){
+	.slides_area p{
+		padding-bottom: 40px;
+	}
+}
+@media screen and (max-width: 767px){
 	.slides_area{
 		align-items: flex-end;
 	}
@@ -359,8 +385,7 @@ main{
 	width: 40%;
 }
 .fix_slider_img{
-	height: 457px!important;
-	width: auto!important;
+	width: 50%;
 }
 @media screen and (max-width: 500px){
 	.slides_area{
@@ -371,8 +396,35 @@ main{
 		width: 60%;
 	}
 }
+.slick-dots{
+	text-align: left;
+	left: 0;
+	bottom: 20px;
+	width: 300px;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+}
+@media screen and (max-width: 991px){
+	.slick-dots{
+		bottom: 10px;
+	}
+}
+.slick-dots li button:before{
+	color: #fff;
+	width: 10px;
+	height: 20px;
+	font-size: 30px;
+	margin: 0px;
+	opacity: 0.4;
+}
+.slick-dots .slick-active button:before{
+	color: #d75312!important;
+	opacity: 1!important;
+}
 /*PROTECT*/
 .protect{
+	margin-top: -30px;
 	background-color: #fff;
 }
 .protect .container{
@@ -579,7 +631,6 @@ main{
 	color: #d75312;
 	background-color: #e7e7e7;
 }
-
 @media (max-width: 825px) and (min-width: 0px){
 	.service_btn_area{
 		margin-top: 35px;
@@ -596,6 +647,17 @@ form{
 	padding: 30px;
 	background-color: #000;
 	max-width: 700px;
+	position: relative;
+	font-size: 20px;
+}
+.close_form_btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	font-weight: bold;
+	line-height: 0.55;
+	padding: 10px;
 }
 .hidden{
 	z-index: 16!important;
@@ -622,7 +684,7 @@ form p{
 		display: none;
 	}
 }
-input{
+input, .submit_btn{
 	color: #080d0f;
 	font-size: 20px;
 	text-align: center;
@@ -633,7 +695,7 @@ input{
 	width: 400px;
 	display: block;
 }
-input[type="submit"]{
+.submit_btn{
 	cursor: pointer;
 	font-size: 20px;
 	margin: 30px auto 0px auto;
@@ -641,9 +703,10 @@ input[type="submit"]{
 	background-color: #d75312!important;
 	width: 300px!important;
 	color: #fff;
+	line-height: 30px;
 }
 @media screen and (max-width: 380px){
-	input[type="submit"]{
+	.submit_btn{
 		width: 200px!important;
 	}
 }
@@ -750,6 +813,7 @@ footer h1{
 		display: block;
 	}
 }
+
 .lg_send_status{
 	display: none;
 	text-align: center;

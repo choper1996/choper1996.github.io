@@ -1,25 +1,27 @@
 $(document).ready(function () {
+
     // SLIDER
     $('.team_slider').slick({
         autoplay: true,
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         adaptiveHeight: true,
         arrows : false,
     });
+
     // BLUR
-    var winScrollTop;
-    var show_price = false;
-    var show_shield = false;
+    let winScrollTop,
+        showPrice = false,
+        showShield = false;
     $(window).scroll(function () {
 
         winScrollTop = $(this).scrollTop();
-        var kok = winScrollTop / 500;
+        const kok = winScrollTop / 500;
         $('.main_blur').css("opacity",kok);
 
-        if(show_price == false && winScrollTop + 300 > $('.procents').offset().top){
+        if(showPrice === false && winScrollTop + 300 > $('.procents').offset().top){
             $({numberValue: 0}).animate({numberValue: 84},{
                 duration: 1200,
                 easing: "linear",
@@ -27,14 +29,15 @@ $(document).ready(function () {
                     $(".price").html(Math.ceil(val) + '%');
                 }
             });
-            show_price = true;
+            showPrice = true;
         }
 
-        if(show_shield == false && winScrollTop + 300 > $('.protect').offset().top){
+        if(showShield == false && winScrollTop + 300 > $('.protect').offset().top){
             $('.protect_shield_wrap').css({'animation':'shield 3s ease-in-out',"width":"100%"});
-            show_shield = true;
+            showShield = true;
         }
     });
+
     // TABS
     $('#tab_2').hide();
     $('#tab_btn_1').click(function(){
@@ -45,6 +48,7 @@ $(document).ready(function () {
         $('#tab_btn_1').css('border-bottom', '2px solid #d75312');
         $('#tab_btn_1 h1').css('color', '#d75312');
     });
+
     $('#tab_btn_2').click(function(){
         $('#tab_1').hide(300);
         $('#tab_btn_1').css('border-bottom', '0px solid #d75312');
@@ -53,18 +57,25 @@ $(document).ready(function () {
         $('#tab_btn_2').css('border-bottom', '2px solid #d75312');
         $('#tab_btn_2 h1').css('color', '#d75312');
     });
+
     // POPUP
     $('.popup-content').magnificPopup({
         type: 'inline'
     });
+    $('.close_form_btn').click(function() {
+        $('.mfp-close').click();
+    });
+
     // CHECK
-    $('.check_box').click(function() {
-        var check = $('.check_box').attr('name');
-        if (check == 'uncheck'){
-            $('.check_box').attr('name', 'check');
+    const checkBox = $('.check_box');
+    checkBox.click(function() {
+        const check = checkBox.attr('name');
+        if (check === 'uncheck'){
+            checkBox.attr('name', 'check');
+            checkBox.css('border', '3px solid #fff');
         }
-        else if (check == 'check'){
-            $('.check_box').attr('name', 'uncheck');
+        else if (check === 'check'){
+            checkBox.attr('name', 'uncheck');
         }
     });
     // END READY

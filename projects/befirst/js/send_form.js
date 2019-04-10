@@ -1,36 +1,58 @@
 $(document).ready(function () {
 
+    $('#code_word').on("keydown", function (e) {
+        return e.which !== 32;
+    });
+
     $('#go_data').click(function () {
 
-        var email_ajax = $('#form_email').val(),
-            promo = $('promocod').val(),
-            phone_ajax = $('#form_phone').val(),
-            telegram_ajax = $('#form_telegram').val();
 
-        if(email_ajax == ""){
+
+        $('input').click(function() {
+            $('.error_data').css('color', '#fff');
+        });
+
+        const emailAjax  = $('#form_email').val(),
+            promo         = $('.promocod').val(),
+            telegramAjax = $('#form_telegram').val();
+
+        let bull;
+
+        if(emailAjax === ""){
             $('.error_data').css('color','red');
             return false;
-        }else {
+        }
+        for (let i = 0; i < emailAjax.length; i++){
+
+            let simbols = emailAjax[i];
+
+            if(simbols === "@"){
+                bull = true
+            }
+        }
+        if(bull === false){
+            $('.error_data').css('color','red');
+            return false;
+        }
+        if (bull === true) {
             $.ajax({
                 type: "POST",
-                url: "https://paymon.org/helper/befirst.io/",
-                // url: "http://192.168.0.26:8080/helper/befirst.io/",
+                url: "",
                 dataType: 'text',
-		header : {
-		    'Access-Control-Allow-Origin':'*'
-		},
+                header : {
+                    'Access-Control-Allow-Origin':''
+                },
                 data: {
                     'method': "deal",
                     'promocode': promo,
-                    'email': email_ajax,
-                    'telegram': telegram_ajax,
-                    'phone': phone_ajax
+                    'email': emailAjax,
+                    'telegram': telegramAjax,
                 },
-                success: function(object){
+                success: function(){
                     console.log("Success");
                     $('.error_data').css('color', '#fff');
                     $('.inputs_area input').val("");
-                    $('.lg_send_status').css('display','block');
+                    $('#price_form .lg_send_status').css('display','block');
                 },
                 error: function(err){
                     console.log("Error");
@@ -44,38 +66,62 @@ $(document).ready(function () {
 
 
         $('#go_data_r').click(function () {
-            var lang;
-            var email_ajax_2 = $('#form_email_r').val();
-            var code_word = $('#code_word').val();
-                if ($('.lg_go').html() == 'Eng') {
+
+            $('input').click(function() {
+                $('.error_datas').css('color', '#fff');
+            });
+
+            let lang,
+                bull;
+
+            const emailAjaxSecond = $('#form_email_r').val(),
+                code_word = $('#code_word').val();
+
+                if ($('.lg_go').html() === 'Eng') {
                     lang = 'ru';
                 }
-                else if ($('.lg_go').html() == 'Ru'){
+                else if ($('.lg_go').html() === 'Ru'){
                     lang = 'eng'
                 }
-                if(email_ajax_2 == ""){
+                if(emailAjaxSecond === ""){
                     $('.error_data_1').css('color','red');
                     return false;
                 }
-                if (code_word == ""){
+
+                bull = false;
+
+                
+                for (let i = 0; i < emailAjaxSecond.length; i++){
+                    let simbols = emailAjaxSecond[i];
+                    if(simbols === "@"){
+                        bull = true
+                    }
+                }
+
+                if(bull === false){
+                    $('.error_data_1').css('color','red');
+                    return false;
+                }
+
+                if (code_word === ""){
                     $('.error_data_2').css('color','red');
                     return false;
                 }
-                if ($('.check_box').attr('name') == 'uncheck'){
+
+                if ( $('.check_box').attr('name') === 'uncheck'){
                     $('.check_box').css('border', '3px solid red');
                     return false;
-                }
-                else {
+                } else {
                     $.ajax({
                         type: "POST",
-                        url: "https://paymon.org/helper/befirst.io/",
+                        url: "",
                         dataType: 'text',
-                header : {
-                    'Access-Control-Allow-Origin':'*'
-                },
+                    header : {
+                        'Access-Control-Allow-Origin':''
+                    },
                     data: {
                         'method': "ref",
-                        'email': email_ajax_2,
+                        'email': emailAjaxSecond,
                         'lang' : lang,
                         'secret_word': code_word
                     },
@@ -85,14 +131,13 @@ $(document).ready(function () {
                         $('.error_data_1').css('color', '#fff');
                         $('.check_box').css('border', '3px solid #fff')
                         $('.inputs_area_items input').val("");
-                        $('.lg_send_status').css('display','block');
+                        $('#referal_form .lg_send_status').css('display','block');
                     },
                     error: function(err){
                         console.log("Error");
                         console.log(err);
                     }
                 });
-
             }
             return false;
         });

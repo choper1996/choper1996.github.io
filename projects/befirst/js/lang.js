@@ -1,7 +1,7 @@
 $(document).ready(function($) {
-    var lang = localStorage.getItem('laung_beF');
+    let lang = localStorage.getItem('laung_beF');
 
-     if(lang == "ru"){
+     if(lang === "ru"){
          translateRu();
      }else{
          translateEng();
@@ -20,7 +20,7 @@ $(document).ready(function($) {
         }
     });
 
-	function translateRu() {
+    function translateRu() {
         $('.lg_go').html("Eng");
         $('.lg_nav_1, .main_btn_1').html('Оставить заявку');
         $('.main_btn_2').html('Прайс-лист');
@@ -60,7 +60,7 @@ $(document).ready(function($) {
         $('#lg_31').html('Вы только посмотрите, что <br>мы можем предложить.');
         $('#lg_32').html('Мы предлагаем комплекс услуг, и <br> готовы пройти с вами весь путь от <br> pre-ICO до post-ICO этапа.');
         $('#lg_33').html('Нажмите сюда');
-        $('.lg_f_1').html("Оставьте Ваши контактные данные. Ваш менеджер с вами свяжется.");
+        $('.lg_f_1').html("Оставьте Ваши контактные данные. Наш менеджер с вами свяжется.");
         $('.lg_f_2').attr('placeholder', 'Введите ваш Email');
         $('.lg_f_3').html("Контактный телефон");
         $('.lg_f_4').attr('placeholder', 'Введите ваш контактный телефон');
@@ -68,22 +68,22 @@ $(document).ready(function($) {
         $('.lg_f_6').attr('placeholder', 'Введите ваш телеграмм логин');
         $('.lg_f_6_1').html("Промокод");
         $('.lg_f_6_2').attr('placeholder', 'Введите ваш промокод');
-        $('.lg_f_7').attr('value', 'ОТПРАВИТЬ');
+        $('.lg_f_7').html('ОТПРАВИТЬ');
         $('.lg_f_8').html("Какие выгоды я получаю, становясь партнером?");
         $('.lg_f_9').html("Зарегистрировавшись в партнерской программе, вы получите личный промокод, которым сможете делиться: ваш друг получит скидку 5% на наши услуги, а вы - вознаграждение в размере 3% от цены услуги, приобретенной вашим знакомым. Таким образом, выгоду получают все! ");
-        $('.lg_f_10').html("Чтобы стать партнером, введите свой email и кодовое слово. Постарайтесь запомнить кодовое слово, ведь оно понадобится вам, чтоб получить вознаграждение.");
+        $('.lg_f_10').html("Чтобы стать партнером, введите свой email и кодовое слово. Обязательно запомните или запишите кодовое слово, его нельзя восстановить и оно понадобится вам для получения вознаграждения. Кодовое слово должно состоять из латинских букв или цифр, без пробелов.");
         $('.lg_f_11').html("\* Кодовое слово");
         $('.lg_f_12').attr('placeholder', 'Придумайте кодовое слово');
         $('.lg_f_13').html("Я согласен с условиями <a class=\"form_doc\" target=\"_blank\" href=\"docs/affiliate_program_ru.pdf\">партнерской программы</a>");
-        $('#lg_34').html('&copy; BeFirst INC. 2018 год. <br> Все права защищены.')
-
-        $('.lg_Shavon').html('Md.Mofassair Hossain - топ-эксперт ICObench, CEO и учредитель Perhalic, инвестор и эдвайзер более чем 18 ICO.');
-        $('.lg_Kim').html('Daniel Kim - Специалист в области маркетинга и продаж с более чем 10-летним опытом работы в Азиатском регионе. Сооснователь Chain Box company.');
+        $('#lg_34').html('&copy; BeFirst INC. 2018 год. <br> Все права защищены.');
         
-        $('.lg_Shohel').html('Shohel Alam - Эксперт ICObench, ICO- предприниматель, эксперт в сфере маркетинга, инвестор, advisor.');
-        $('.lg_Giovanni').html('Giovanni Casagrande - Топ-50 Эксперт ICObench, advisor. Специалист в области продвижения проектов. Сооснователь Black Marketing Guru.');
-        $('.lg_Giacomo').html('Giacomo Arcaro - ICO эксперт и advisor, сооснователь ICOBooster и Fintech.Review. Специалист в области продвижения проектов.');
-        $('.lg_David').html('Dr. David Meszaros - Международный  юрист и стратегический консультант для компаний и ICO.');
+        $('.lg_Shavon').html('Md.Mofassair Hossain - топ-эксперт ICObench, CEO и учредитель Perhalic, инвестор и эдвайзер более чем 18 ICO');
+        $('.lg_Kim').html('Daniel Kim - Специалист в области маркетинга и продаж с более чем 10-летним опытом работы в Азиатском регионе. Сооснователь Chain Box company');
+        $('.lg_Shohel').html('Shohel Alam - Эксперт ICObench, ICO-предприниматель, эксперт в сфере маркетинга, инвестор, advisor');
+        $('.lg_Giovanni').html('Giovanni Casagrande - Топ-30 Эксперт ICObench, advisor. Специалист в области продвижения проектов. Сооснователь Black Marketing Guru');
+        $('.lg_Giacomo').html('Giacomo Arcaro - ICO эксперт и advisor, сооснователь ICOBooster и Fintech.Review. Специалист в области продвижения проектов');
+        $('.lg_David').html('Dr. David Meszaros - Международный  юрист и стратегический консультант для компаний и ICO');
+        $('.lg_Ali').html('Ali Kassab - Предприниматель с более чем 20-летним опытом работы в сфере облачного программного обеспечения и цифровых платежей. Известный новатор и энтузиаст');
         
 
         $('.main_section_1').css("background-image", "url(img/logo_with_words.png)");
@@ -130,7 +130,7 @@ $(document).ready(function($) {
         $('#lg_31').html('Just look <br> what we have to offer!');
         $('#lg_32').html('We offer a wide range of services and we <br> are ready to go with you, all the way <br> from pre-ICO to post-ICO');
         $('#lg_33').html('click here');
-        $('.lg_f_1').html("Leave Your contact information. Your manager will contact you.");
+        $('.lg_f_1').html("Leave Your contact information. Our manager will contact you.");
         $('.lg_f_2').attr('placeholder', 'Enter your Email');
         $('.lg_f_3').html("Phone number");
         $('.lg_f_4').attr('placeholder', 'Enter your phone number');
@@ -138,23 +138,23 @@ $(document).ready(function($) {
         $('.lg_f_6').attr('placeholder', 'Enter your Telegram');
         $('.lg_f_6_1').html("Promotional code");
         $('.lg_f_6_2').attr('placeholder', 'Enter your peronal promotional code');
-        $('.lg_f_7').attr('value', 'SEND');
+        $('.lg_f_7').html('SEND');
         $('.lg_f_8').html("What benefits do I get when I become a partner? ");
         $('.lg_f_9').html("After registering in the affiliate program, you receive a personal promotional code that you can share with your friends. They will receive a 5% discount on our services and you will get 3% of the price of the service they purchased. Everyone wins!");
-        $('.lg_f_10').html("To become a partner, enter your email and a code word. Try to remember the code word, since you will need it to your rewards.");
+        $('.lg_f_10').html("To become a partner, enter your email and a code word. Remember or write down your code word. It cannot be recovered and you will need it to receive rewards. The code word should consist of Latin letters or numbers without spaces.");
         $('.lg_f_11').html("* Code word");
         $('.lg_f_12').attr('placeholder', 'Enter your code word');
         $('.lg_f_13').html("I agree to the terms of the <a class=\"form_doc\" target=\"_blank\" href=\"docs/affiliate_program_eng.pdf\">affiliate program</a>");
         $('#lg_34').html('Copyright &copy; 2018 BeFirst. <br> All rights reserved.');
-        $('.lg_Shavon').html('Md.Mofassair Hossain - TOP-expert at ICObench, CEO and Founder of Perhalic, Investor and Advisor of 18+ ICOs in Blockchain industry.');
-        $('.lg_Kim').html('Daniel Kim - Has been working for marketing and sales industry more than 10years in south korea and asia region. Co-founder of Chain Box company.');
-       
-
-        $('.lg_Shohel').html('Shohel Alam - Expert at ICObench,  Entrepreneur- ICO Marketing Expert, Investor & Advisor.');
-        $('.lg_Giovanni').html('Giovanni Casagrande - An ICOBench Top50 Expert and Advisor. Blockchain industry figurehead, growth hacker and a co-Founder of Black Marketing Guru.');
-        $('.lg_Giacomo').html('Giacomo Arcaro - ICO growth hacker, ICO Expert and Advisor, Co-Founder ICOBooster and Fintech. Review.');
-        $('.lg_David').html('Dr. David Meszaros - An international lawyer and strategic advisor for companies and ICO projects.');
-
+        
+        $('.lg_Shavon').html('Md.Mofassair Hossain - TOP-expert at ICObench, CEO and Founder of Perhalic, Investor and Advisor of 18+ ICOs in Blockchain industry');
+        $('.lg_Kim').html('Daniel Kim - Has been working for marketing and sales industry more than 10years in south korea and Asia region. Co-founder of Chain Box company');
+        $('.lg_Shohel').html('Shohel Alam - Expert at ICObench,  Entrepreneur-ICO Marketing Expert, Investor & Advisor');
+        $('.lg_Giovanni').html('Giovanni Casagrande - An ICOBench Top30 Expert and Advisor. Blockchain industry figurehead, growth hacker and a co-Founder of Black Marketing Guru');
+        $('.lg_Giacomo').html('Giacomo Arcaro - ICO growth hacker, ICO Expert and Advisor, Co-Founder ICOBooster and Fintech. Review');
+        $('.lg_David').html('Dr. David Meszaros - An international lawyer and strategic advisor for companies and ICO projects');
+        $('.lg_Ali').html('Ali Kassab - Businessman & entrepreneur with 20+ years of experience across multinational cloud software companies and digital payment companies. A known innovator and technology enthusiast');
+        
         $('.main_section_1').css("background-image", "url(img/logo_with_words_eng.png)");
         $('.lg_send_status').html("Your request has been sent!");
         $('.main_mobile_img').attr('src', 'img/logo_with_words_mobile_eng.png');

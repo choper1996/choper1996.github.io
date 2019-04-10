@@ -3,15 +3,7 @@
 			$(this).toggleClass('nav_burger_active');
 		});
 		$('.nav_burger').click(function() {
-			$('nav').slideToggle();
-			$('nav').css('display', 'flex');
+			$('.nav_btns_area').slideToggle();
+			$('.nav_btns_area').css('display', 'flex');
 		});
-	});
-
-	var menu = $('nav a');
-	$(window).resize(function(){ 
-		var wid = $(window).width(); 
-		if(wid > 550 && $('nav').is(':hidden')){
-			$('nav').css('display', 'flex');
-		}
 	});
