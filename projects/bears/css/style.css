@@ -170,7 +170,7 @@ form {display: block}
 	color: #5a5a5a;
 }
 
-#header_contacnt {
+#header_contact {
 	font-size: 15px;
 	text-align: right;
 	line-height: 150%;
@@ -274,9 +274,6 @@ form {display: block}
 	}
 }
 @media screen and (max-width: 768px) {
-	#video iframe {
-		height: 407px;
-	}	
 	h1 {
 		font-size: 40px;
 	}
@@ -486,13 +483,6 @@ form {display: block}
 #video .border_box, #comments .border_box {
 	display: block;
 	padding: 50px 70px;
-}
-
-/*VIDEO*/
-#video iframe {
-	display: block;
-	width: 100%;
-	height: 647px;
 }
 
 /*GALERY*/

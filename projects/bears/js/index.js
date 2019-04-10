@@ -1,17 +1,25 @@
 jQuery(document).ready(function($) {
 
 	// anchors
-	$('.nav_links, #main a').bind("click", function(e){
-	    var anchor = $(this);
-	    $('html, body').stop().animate({
+    const anchorLinks = $('.nav_links, #main a'),
+        window = $('html, body');
+
+    anchorLinks.bind("click", function(e){
+	    let anchor = $(this);
+
+        window.stop().animate({
 	        scrollTop: $(anchor.attr('href')).offset().top
 	    }, 1000);
+
 	    e.preventDefault();
 	});
 
 	// navigation
-	$('#burger').click(function() {
-		$('#header_txt_wrap').slideToggle(300);
+    const burger = $('#burger'),
+        headerText = $('#header_txt_wrap');
+
+    burger.click(function() {
+        headerText.slideToggle(300);
 	});
 
 	// popup
@@ -19,34 +27,43 @@ jQuery(document).ready(function($) {
 	    type: 'inline'
 	});
 
+	// popup close windows
 	$('.close_area').click(function() {
 		$('.mfp-close').click();
 	});
 
 	// choicee color
-	$('.bear_color').click(function() {
+    const bearColor = $('.bear_color'),
+        bearImg = $('.bear_wrap > img');
+
+    bearColor.click(function() {
 		$(this).siblings().removeClass('active_color');
 		$(this).addClass('active_color');
-		$('.bear_wrap > img').removeClass('active');
+        bearImg.removeClass('active');
 
-		var colorId = $(this).attr('id');
+		let colorId = $(this).attr('id');
 
 		$('#bear_' + colorId).addClass('active');
 	});
 
 	// FAQ toggle
-	$('#faq section').click(function(e) {
+	const faqSection = $('#faq section'),
+        faqAnswer = $('.answer');
+
+    faqSection.click(function(e) {
 		if ( $(this).attr('class') === 'faq_hover') {
-			$(this).find('.answer').slideToggle(300);
+			$(this).find(faqAnswer).slideToggle(300);
 			$(this).removeClass();
 		} else {
-			$(this).find('.answer').slideToggle(300);
+			$(this).find(faqAnswer).slideToggle(300);
 			$(this).addClass('faq_hover');
 		}
 	});
 
-	// instagramm slider
-	$('.inst_slider').slick({
+	// instagram slider
+	const instagramSlider = $('.inst_slider');
+
+    instagramSlider.slick({
 	    autoplay: true,
 	    dots: true,
 	    infinite: true,
@@ -72,5 +89,6 @@ jQuery(document).ready(function($) {
 	        }
 	      ]
 	});
+    //end ready
 });
 
