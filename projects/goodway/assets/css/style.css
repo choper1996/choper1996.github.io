@@ -153,7 +153,6 @@ input[type=number]::-webkit-outer-spin-button {
     height: 100vh;
     max-height: 900px;
     min-height: 860px;
-    background: #fff url(../img/main-background-mirror.jpg);
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -172,13 +171,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .main__content-wrapper:first-child {
-    /*background:no-repeat url(../img/main-background-1.jpg) bottom center;*/
+    background:no-repeat url(../img/main-background-1.jpg) bottom center;
     -webkit-background-size:cover;
     background-size: cover;
 }
 
 .main__content-wrapper:last-child {
-    /*background:no-repeat url(../img/main-background-2.jpg) bottom center;*/
+    background:no-repeat url(../img/main-background-2.jpg) bottom center;
     -webkit-background-size:cover;
     background-size: cover;
 }
