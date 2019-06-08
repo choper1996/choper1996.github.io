@@ -5,6 +5,10 @@ body {
     position: relative;
 }
 
+body > * {
+    box-sizing: border-box;
+}
+
 h1, h2, p, a, li {
     color: #0b0b10;
     font-family: sans-serif;
@@ -67,6 +71,7 @@ img {
     background:url(../img/apple-logo.png);
     background-size: 100% auto;
 }
+
 .app-store-button__big-text {
     display: block;
     padding-top: 1px;
@@ -98,7 +103,9 @@ img {
 
 /*MAIN*/
 .main {
+    position: relative;
     height: 100vh;
+    min-height: 740px;
     display: flex;
     align-items: center;
 }
@@ -119,6 +126,7 @@ img {
 
 .main__text-wrapper {
     width: 50%;
+    position: relative;
 }
 
 .main__phone {
@@ -158,6 +166,28 @@ img {
 .main-list__items:nth-child(3):before {
     background:no-repeat url(../img/icon-money.png) center;
 }
+
+.main__down-button {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.main__down-button img{
+    width: 30px;
+}
+
+.main__down-button-mobile {
+    display: none;
+}
+
 
 /*ABILITIES*/
 .abilities {
@@ -264,6 +294,7 @@ img {
 }
 
 .registration-steps-list__item {
+    padding-left: 11px;
     margin-bottom: 50px;
 }
 
@@ -358,21 +389,164 @@ img {
     width: 40px;
 }
 
+@media screen and (max-width: 1199.98px) {
+    .video {
+        width: 50%;
+    }
 
-@media screen and (max-width: 320px) {
+    .abilities-list {
+        padding-left: 55px;
+    }
+
+    .footer__links-list {
+        margin: 0 auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    h1 {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    .main__title {
+        margin-bottom: 50px;
+    }
+
+    .main__phone {
+        width: 220px;
+    }
+
+    .main__content-wrapper {
+        background: none;
+    }
+
+    .main__list {
+        flex-direction: column;
+        margin: 0 0 60px 0;
+    }
+
+    .main-list__items {
+        padding-left: 60px;
+        margin-bottom: 27px;
+    }
+
+    .abilities__content-wrapper {
+        flex-direction: column;
+    }
+
+    .video  {
+        margin: 0 auto 50px auto;
+    }
+
+    .abilities__text-wrapper {
+        width: 100%;
+    }
+
+    .abilities .app-store-button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .registration__phone {
+        width: 220px;
+    }
+
+    .registration__content-wrapper {
+        flex-direction: column;
+    }
+
+    .registration__phone-wrapper {
+        margin-bottom: 50px;
+    }
+
+    .registration__text-wrapper {
+        width: auto;
+    }
+
+    .footer__content-wrap {
+        flex-direction: column;
+    }
+    .footer__logo {
+        margin: 0 auto 30px auto;
+    }
+    .footer-ifo-section__paragraph {
+        text-align: center;
+    }
+    .footer__info-section .app-store-button {
+        display: block;
+        margin: 0 auto 55px auto;
+    }
+    .footer__links-list {
+        margin: 0 auto 50px auto;
+    }
+    .footer__social-section {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 767.98px) {
+    /*GENERAL*/
     h1 {
         font-size: 30px;
         line-height: 36px;
     }
 
+    h2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    p, li, a, span {
+        font-size: 12px;
+    }
+
+    .app-store-button {
+        font-size: 10px;
+    }
+
+    .app-store-button__big-text {
+        font-size: 14px;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    .abilities-list__item {
+        line-height: 18px;
+        padding-left: 0;
+    }
+
+    .abilities-list__item:before {
+        left: -60px;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    /*GENERAL*/
+    .container {
+        width: 320px;
+    }
+
+    /*MAIN*/
+    .main {
+        height: auto;
+        min-height: auto;
+        flex-direction: column;
+        padding: 90px 0 25px 0;
+    }
+
     .main__content-wrapper {
-        flex-wrap: wrap;
+        background: none;
     }
 
     .main__mobile-title {
         display: block;
-        margin-bottom: 30px;
+        margin:0 auto 30px auto;
         width: 100%;
+        max-width: 320px;
         text-align: center;
     }
 
@@ -380,25 +554,219 @@ img {
         display: none;
     }
 
-    .main__phone-wrapper {
-        width: 100%;
-    }
-
     .main__phone {
         width: 190px;
+        margin-left: -30px;
+    }
+
+    .main__list {
+        flex-direction: column;
+        margin: 0 0 60px 0;
     }
 
     .main-list__items {
         font-size: 14px;
-        padding-left: 30 px;
+        padding-left: 60px;
+        margin-bottom: 27px;
+    }
+
+    .main-list__items:last-child {
+        margin-bottom: 0;
     }
 
     .main-list__items:before {
-        position: absolute;
-        left: 0;
-        top: 0;
+        width: 27px;
         height: 20px;
+        top: 50%;
+        left: 23px;
+        transform: translateY(-50%);
+    }
+
+    .main-list__items:nth-child(1):before {
+        -webkit-background-size: auto 100%;
+        background-size: auto 100%;
+    }
+
+    .main-list__items:nth-child(2):before {
+        -webkit-background-size: auto 100%;
+        background-size: auto 100%;
+    }
+
+    .main-list__items:nth-child(3):before {
+        -webkit-background-size: 100% auto;
+        background-size: 100% auto;
+    }
+
+    .main .app-store-button {
+        margin-left: 22px;
+    }
+
+    .main__down-button {
+        display: none;
+    }
+
+    .main__down-button-mobile {
+        position: absolute;
+        left: 50%;
+        bottom: -90px;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .main__down-button-mobile img{
         width: 20px;
-        content: '';
+    }
+
+    /*ABILITIES*/
+    .abilities {
+        background: url(../img/abilities-mobile-background.png) top center;
+        background-size: 577px 100%;
+        padding: 47px 0 89px 0;
+    }
+
+    .abilities__content-wrapper {
+        flex-direction: column;
+    }
+
+    .abilities__title {
+        margin-bottom: 30px;
+    }
+
+    .video {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .video__play, .video__play-hover {
+        width: 40px;
+    }
+
+    .abilities__text-wrapper {
+        width: 100%;
+    }
+
+    .abilities-list__item {
+        margin-bottom: 27px;
+        padding-left: 23px;
+        line-height: 18px;
+        letter-spacing: 0.3px;
+    }
+
+    .abilities-list__item:last-child {
+        margin-bottom: 50px;
+    }
+
+    .abilities-list__item:before {
+        top: -5px;
+        left: -10px;
+    }
+
+    /*REGISTRATION*/
+    .registration {
+        padding: 50px 0 55px 0;
+    }
+
+    .registration__title {
+        margin-bottom: 30px;
+    }
+
+    .registration__title > br {
+        display: none;
+    }
+
+    .registration__content-wrapper {
+        flex-direction: column;
+    }
+
+    .registration__phone-wrapper, .registration__text-wrapper {
+        width: 100%;
+    }
+
+    .registration__phone-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .registration__phone {
+        width: 190px;
+    }
+
+    .registration__subtitle {
+        font-size: 14px;
+    }
+
+    .registration-steps-list__item {
+        padding-left: 6px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .registration-steps-list__number {
+        font-size: 19px;
+        margin-right: 17px;
+    }
+
+    .registration-steps-list__number:before {
+        left: -6px;
+        width: 12px;
+    }
+
+    /*FOOTER*/
+    .footer {
+        padding: 50px 0;
+        background:no-repeat url(../img/footer-mobile-background.jpg)top center;
+        -webkit-background-size: 577px 100%;
+        background-size: 577px 100%;
+    }
+
+    .footer__content-wrap {
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        margin: 0 auto 30px auto;
+    }
+
+    .footer-ifo-section__paragraph {
+        margin-bottom: 30px;
+        font-size: 10px;
+        line-height: 18px;
+        letter-spacing: 0.25px;
+        text-align: center;
+    }
+
+    .footer-ifo-section__paragraph > br {
+        display: none;
+    }
+
+    .footer__info-section .app-store-button {
+        display: block;
+        margin: 0 auto 55px auto;
+    }
+
+    .footer__links-list {
+        margin: 0 auto 50px auto;
+    }
+
+
+    .footer-links-list__item a {
+        font-size: 14px;
+    }
+
+    .footer__social-section {
+        justify-content: center;
+    }
+
+    .footer-social-section__item {
+        margin-right: 23px;
+    }
+
+    .footer__social-section img {
+        width: 33px;
     }
 }
