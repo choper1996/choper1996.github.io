@@ -7,7 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
     <title>SAVL</title>
 </head>
 <body>
@@ -15,14 +19,18 @@
     <header class="header">
         <div class="container header__content-wrapper">
             <img class="header__logo" src="assets/img/logo.png" alt="savl logo">
-            <nav class="nav-list">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+            <nav class="nav-list-wrapper">
+                <ul class="nav-list">
+                    <li class="nav-list-item">Главная</li>
+                    <li class="nav-list-item">Возможности</li>
+                    <li class="nav-list-item">Регистрация</li>
                 </ul>
             </nav>
-            <img class="header__burger" src="assets/img/icon-burger.png" alt="burger icon">
+            <div class="header__burger">
+                <div class="header-burger__line"></div>
+                <div class="header-burger__line"></div>
+                <div class="header-burger__line"></div>
+            </div>
         </div>
     </header>
     <!--MAIN-->
@@ -31,14 +39,21 @@
             <h1 class="main__mobile-title">Крипто - кошелёк нового поколения</h1>
             <div class="container main__content-wrapper">
                 <div class="main__phone-wrapper">
-                    <img class="main__phone" src="assets/img/main-phone.png" alt="savl app">
+                    <div class="main__slide-wrapper">
+                        <div class="main__slider">
+                            <img class="main__slide" src="assets/img/main-slide-1.png" alt="">
+                            <img class="main__slide" src="assets/img/main-slide-2.png" alt="">
+                            <img class="main__slide" src="assets/img/main-slide-3.png" alt="">
+                        </div>
+                        <img class="main__phone" src="assets/img/tell.png" alt="savl app">
+                    </div>
                 </div>
                 <div class="main__text-wrapper">
                     <h1 class="main__title">Крипто - кошелёк нового поколения</h1>
                     <ul class="main__list">
-                        <li class="main-list__items">Управляй</li>
-                        <li class="main-list__items">Плати</li>
-                        <li class="main-list__items">Обменивай</li>
+                        <li class="main-list__items active" id="0">Управляй</li>
+                        <li class="main-list__items" id="1">Плати</li>
+                        <li class="main-list__items" id="2">Обменивай</li>
                     </ul>
                     <button class="app-store-button">Скачать с <span class="app-store-button__big-text">App Store</span></button>
                     <div class="main__down-button-mobile">

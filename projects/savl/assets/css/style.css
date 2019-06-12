@@ -82,11 +82,13 @@ img {
 
 /*HEADER*/
 .header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding: 17px 0;
     left: 0;
     top: 0;
+    background-color: #fff;
+    z-index: 1;
 }
 
 .header__content-wrapper {
@@ -100,9 +102,85 @@ img {
 }
 
 .header__burger {
+    cursor: pointer;
+    position: relative;
     width: 25px;
+    height: 16px;
 }
 
+.header-burger__line {
+    position: absolute;
+    background-color: #303132;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    transition: .3s;
+    transform-origin: left;
+}
+
+.header-burger__line:nth-child(1) {
+    top:0;
+}
+
+.header-burger__line:nth-child(2){
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.header-burger__line:nth-child(3){
+    bottom: 0;
+    width: 20px;
+}
+
+.header.active .header-burger__line:nth-child(1) {
+    top:0;
+    transform: rotate(50deg);
+}
+
+.header.active .header-burger__line:nth-child(2){
+    top:50%;
+    opacity: 0;
+    transform: translateY(-50%);
+}
+
+.header.active .header-burger__line:nth-child(3){
+    bottom:-5px;
+    width: 25px;
+    transform: rotate(-50deg);
+}
+
+.nav-list-wrapper {
+    width: 100%;
+    height: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.header.active .nav-list {
+    left: 0;
+}
+
+.nav-list-item {
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 80px;
+}
+
+nav-list-item:last-child {
+    margin-right: 0;
+}
 /*MAIN*/
 .main {
     position: relative;
@@ -131,10 +209,25 @@ img {
     position: relative;
 }
 
-.main__phone {
+.main__slide-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     margin: 0 auto;
     width: 300px;
+}
+
+.main__slider {
+    margin: 0 auto;
+    width: 265px;
+    position: absolute;
+}
+
+.main__phone {
+    width: 100%;
     filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
+    z-index: 1;
 }
 
 .main__list {
@@ -143,9 +236,15 @@ img {
     margin: 52px 0;
 }
 
-.main-list__items {
+.main-list__items {;
     position: relative;
     padding-left: 46px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.main-list__items.active {
+    transform: scale(1.15);
 }
 
 .main-list__items:before {
