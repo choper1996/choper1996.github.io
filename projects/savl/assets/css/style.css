@@ -46,15 +46,17 @@ img {
 
 .app-store-button {
     position: relative;
-    text-align: left;
-    padding: 7px 14px 7px 42px;
     border: 0;
+    text-align: left;
+    text-decoration: none;
+    padding: 7px 14px 7px 42px;
     border-radius: 5px;
     font-size: 12px;
     background-color: rgb(11, 11, 16);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     color: #fff;
     transition: .2s;
+    cursor: pointer;
 }
 
 .app-store-button:hover {
@@ -156,15 +158,18 @@ img {
 }
 
 .main-list__items:nth-child(1):before {
-    background:no-repeat url(../img/icon-shield.png) center;
+    background:no-repeat url(../img/icon-shield.svg) center;
+    background-size: auto 100%;
 }
 
 .main-list__items:nth-child(2):before {
-    background:no-repeat url(../img/icon-wallet.png) center;
+    background:no-repeat url(../img/icon-wallet.svg) center;
+    background-size: auto 100%;
 }
 
 .main-list__items:nth-child(3):before {
-    background:no-repeat url(../img/icon-money.png) center;
+    background:no-repeat url(../img/icon-money.svg) center;
+    background-size: auto 100%;
 }
 
 .main__down-button {
@@ -193,7 +198,7 @@ img {
 .abilities {
     padding: 100px 0 212px 0;
     background: url(../img/abilities-background.png) top center;
-    background-size: 100% 100%;
+    background-size: auto 100%;
 }
 
 .abilities .container {
@@ -331,8 +336,8 @@ img {
 /*FOOTER*/
 .footer {
     padding: 80px 0 50px 0;
-    background:#0b0b10 url(../img/footer-background.jpg);
-    background-size: 100% 100%;
+    background:#0b0b10 url(../img/footer-background.jpg) center center;
+    background-size: auto 100%;
 }
 
 .footer__content-wrap {
@@ -398,6 +403,10 @@ img {
         padding-left: 55px;
     }
 
+    .abilities .app-store-button{
+        margin-left: 55px;
+    }
+
     .footer__links-list {
         margin: 0 auto 0 auto;
     }
@@ -409,6 +418,10 @@ img {
         line-height: 52px;
     }
 
+    .main {
+        height: 720px;
+    }
+
     .main__title {
         margin-bottom: 50px;
     }
@@ -418,7 +431,7 @@ img {
     }
 
     .main__content-wrapper {
-        background: none;
+        background-size: auto 430px;
     }
 
     .main__list {
@@ -446,6 +459,23 @@ img {
     .abilities .app-store-button {
         display: block;
         margin: 0 auto;
+    }
+
+    .registration {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .registration:before {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 536px;
+        height: 220px;
+        background: no-repeat url(../img/main-background.png) left top;
+        background-size: auto 100%;
+        content: '';
     }
 
     .registration__phone {
@@ -502,44 +532,25 @@ img {
         font-size: 12px;
     }
 
-    .app-store-button {
-        font-size: 10px;
-    }
-
-    .app-store-button__big-text {
-        font-size: 14px;
-    }
-
-    .video {
-        width: 100%;
-    }
-
-    .abilities-list__item {
-        line-height: 18px;
-        padding-left: 0;
-    }
-
-    .abilities-list__item:before {
-        left: -60px;
-    }
-}
-
-@media screen and (max-width: 575.98px) {
-    /*GENERAL*/
-    .container {
-        width: 320px;
-    }
-
-    /*MAIN*/
     .main {
+        flex-direction: column;
+        overflow-x: hidden;
+        padding: 90px 0 90px 0;
+        position: relative;
         height: auto;
         min-height: auto;
-        flex-direction: column;
-        padding: 90px 0 25px 0;
     }
 
-    .main__content-wrapper {
-        background: none;
+    .main:before {
+        position: absolute;
+        width: 486px;
+        height: 322px;
+        content: '';
+        left: 50%;
+        bottom: 90px;
+        background:no-repeat url(../img/main-background.png) right bottom;
+        background-size: auto 322px;
+        transform: translateX(-50%);
     }
 
     .main__mobile-title {
@@ -554,20 +565,12 @@ img {
         display: none;
     }
 
-    .main__phone {
-        width: 190px;
-        margin-left: -30px;
-    }
-
-    .main__list {
-        flex-direction: column;
-        margin: 0 0 60px 0;
+    .main__content-wrapper {
+        background: none;
     }
 
     .main-list__items {
-        font-size: 14px;
-        padding-left: 60px;
-        margin-bottom: 27px;
+        padding-left: 37px;
     }
 
     .main-list__items:last-child {
@@ -578,7 +581,7 @@ img {
         width: 27px;
         height: 20px;
         top: 50%;
-        left: 23px;
+        left: 0px;
         transform: translateY(-50%);
     }
 
@@ -597,8 +600,72 @@ img {
         background-size: 100% auto;
     }
 
-    .main .app-store-button {
-        margin-left: 22px;
+    .app-store-button {
+        font-size: 10px;
+    }
+
+    .app-store-button__big-text {
+        font-size: 14px;
+    }
+
+    .video__play, .video__play-hover {
+        width: 40px;
+    }
+
+    .abilities__title {
+        margin-bottom: 30px;
+    }
+
+    .abilities-list__item {
+        line-height: 18px;
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .abilities-list__item:before {
+        left: -60px;
+    }
+
+    .registration__subtitle {
+        font-size: 14px;
+    }
+
+    .registration__subtitle {
+        font-size: 14px;
+    }
+
+    .registration-steps-list__item {
+        padding-left: 6px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .registration-steps-list__number {
+        font-size: 19px;
+        margin-right: 17px;
+    }
+
+    .registration-steps-list__number:before {
+        left: -6px;
+        width: 12px;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    /*GENERAL*/
+    .container {
+        width: 320px;
+    }
+
+    /*MAIN*/
+    .main {
+        padding: 90px 0 25px 0;
+        flex-direction: column;
+    }
+
+    .main:before {
+        bottom: 25px;
     }
 
     .main__down-button {
@@ -622,6 +689,33 @@ img {
         width: 20px;
     }
 
+    .main__phone {
+        width: 190px;
+        margin-left: -30px;
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+    }
+
+
+    .main__list {
+        flex-direction: column;
+        margin: 0 0 60px 0;
+    }
+
+    .main-list__items {
+        font-size: 14px;
+        padding-left: 60px;
+        margin-bottom: 27px;
+    }
+
+    .main-list__items:before {
+        left: 23px;
+    }
+
+    .main .app-store-button {
+        margin-left: 22px;
+    }
+
+
     /*ABILITIES*/
     .abilities {
         background: url(../img/abilities-mobile-background.png) top center;
@@ -642,12 +736,12 @@ img {
         margin-bottom: 50px;
     }
 
-    .video__play, .video__play-hover {
-        width: 40px;
-    }
-
     .abilities__text-wrapper {
         width: 100%;
+    }
+
+    .abilities-list {
+        padding-left: 0;
     }
 
     .abilities-list__item {
@@ -695,33 +789,11 @@ img {
         width: 190px;
     }
 
-    .registration__subtitle {
-        font-size: 14px;
-    }
-
-    .registration-steps-list__item {
-        padding-left: 6px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-    }
-
-    .registration-steps-list__number {
-        font-size: 19px;
-        margin-right: 17px;
-    }
-
-    .registration-steps-list__number:before {
-        left: -6px;
-        width: 12px;
-    }
-
     /*FOOTER*/
     .footer {
         padding: 50px 0;
-        background:no-repeat url(../img/footer-mobile-background.jpg)top center;
-        -webkit-background-size: 577px 100%;
-        background-size: 577px 100%;
+        background:#0b0b10 no-repeat url(../img/footer-mobile-background.jpg)top center;
+        background-size: 577px auto;
     }
 
     .footer__content-wrap {
