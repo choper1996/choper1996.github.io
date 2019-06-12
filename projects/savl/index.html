@@ -18,12 +18,14 @@
     <!--HEADER-->
     <header class="header">
         <div class="container header__content-wrapper">
-            <img class="header__logo" src="assets/img/logo.png" alt="savl logo">
+            <a href="#main" class="header__anchor-to-main">
+                <img class="header__logo" src="assets/img/logo.png" alt="savl logo">
+            </a>
             <nav class="nav-list-wrapper">
                 <ul class="nav-list">
-                    <li class="nav-list-item">Главная</li>
-                    <li class="nav-list-item">Возможности</li>
-                    <li class="nav-list-item">Регистрация</li>
+                    <li class="nav-list-item"><a href="#main">Главная</a></li>
+                    <li class="nav-list-item"><a href="#abilities">Возможности</a></li>
+                    <li class="nav-list-item"><a href="#registration">Регистрация</a></li>
                 </ul>
             </nav>
             <div class="header__burger">
@@ -35,7 +37,7 @@
     </header>
     <!--MAIN-->
     <main>
-        <article class="main">
+        <article class="main" id="main">
             <h1 class="main__mobile-title">Крипто - кошелёк нового поколения</h1>
             <div class="container main__content-wrapper">
                 <div class="main__phone-wrapper">
@@ -45,7 +47,7 @@
                             <img class="main__slide" src="assets/img/main-slide-2.png" alt="">
                             <img class="main__slide" src="assets/img/main-slide-3.png" alt="">
                         </div>
-                        <img class="main__phone" src="assets/img/tell.png" alt="savl app">
+                        <img class="main__phone" src="assets/img/tell.png" alt="iphone X">
                     </div>
                 </div>
                 <div class="main__text-wrapper">
@@ -65,7 +67,7 @@
                 <img src="assets/img/icon-arrow-down.svg" alt="arrow down">
             </div>
         </article>
-        <article class="abilities even-blocks">
+        <article class="abilities even-blocks" id="abilities">
             <div class="container">
                 <h2 class="abilities__title">Возможности <br>нашего приложения</h2>
                 <div class="abilities__content-wrapper">
@@ -86,18 +88,25 @@
                 </div>
             </div>
         </article>
-        <article class="registration">
+        <article class="registration" id="registration">
             <div class="container">
                 <h2 class="registration__title">Начни пользоваться <b>SAVL</b></h2>
                 <div class="registration__content-wrapper">
                     <div class="registration__phone-wrapper">
-                        <img class="registration__phone"  src="assets/img/registration-phone.png" alt="savl phone">
+                        <div class="registration__slide-wrapper">
+                            <div class="registration__slider">
+                                <img src="assets/img/main-slide-1.png" alt="">
+                                <img src="assets/img/main-slide-2.png" alt="">
+                                <img src="assets/img/main-slide-3.png" alt="">
+                            </div>
+                            <img class="main__phone" src="assets/img/tell.png" alt="iphone X">
+                        </div>
                     </div>
                     <div class="registration__text-wrapper">
                         <ul class="registration__steps-list">
-                            <li class="registration-steps-list__item"><span class="registration-steps-list__number">01</span> <span>Скачать приложение в <a target="_blank" href="">App Store</a></span></li>
-                            <li class="registration-steps-list__item"><span class="registration-steps-list__number">02</span> <span>Создать кошелёк</span></li>
-                            <li class="registration-steps-list__item"><span class="registration-steps-list__number">03</span> <span>Пополнить кошелек</span></li>
+                            <li class="registration-steps-list__item active" id="0"><span class="registration-steps-list__number">01</span> <span>Скачать приложение в <a target="_blank" href="">App Store</a></span></li>
+                            <li class="registration-steps-list__item" id="1"><span class="registration-steps-list__number">02</span> <span>Создать кошелёк</span></li>
+                            <li class="registration-steps-list__item" id="2"><span class="registration-steps-list__number">03</span> <span>Пополнить кошелек</span></li>
                         </ul>
                     </div>
                 </div>
@@ -110,17 +119,17 @@
             <div class="footer__info-section">
                 <img class="footer__logo" src="assets/img/logo-white.png" alt="savl logo">
                 <p class="footer-ifo-section__paragraph">SAVL GmbH, c/o Schwärzler Rechtsanwälte, Baarerstr. 75, 6300 <br> Zug, Kanton Zug, Schweiz Registerangaben: Kanton Zug <br> Unternehmensnummer: CHE-365.396.532</p>
-                <button href="" class="app-store-button">Скачать с <span class="app-store-button__big-text">App Store</span></button>
+                <button href="" class="app-store-button"><span class="app-store-gradient"></span><div class="button-text">Скачать с <span class="app-store-button__big-text">App Store</span></div></button>
             </div>
             <ul class="footer__links-list">
                 <li class="footer-links-list__item"><a href="" target="_blank">Privacy policy</a></li>
                 <li class="footer-links-list__item"><a href="" target="_blank">Terms of use</a></li>
             </ul>
             <div class="footer__social-section">
-                <a class="footer-social-section__item" href="" target="_blank"><img src="assets/img/icon-vk.png" alt="vk icon"></a>
-                <a class="footer-social-section__item" href="" target="_blank"><img src="assets/img/icon-facebook.png" alt="facebook icon"></a>
-                <a class="footer-social-section__item" href="" target="_blank"><img src="assets/img/icon-instagram.png" alt="instagram icon"></a>
-                <a class="footer-social-section__item" href="" target="_blank"><img src="assets/img/icon-telegram.png" alt="instagram icon"></a>
+                <a class="footer-social-section__item" href="" target="_blank"><span class="footer__socials-bg"></span><img src="assets/img/icon-vk.png" alt="vk icon"></a>
+                <a class="footer-social-section__item" href="" target="_blank"><span class="footer__socials-bg"></span><img src="assets/img/icon-facebook.png" alt="facebook icon"></a>
+                <a class="footer-social-section__item" href="" target="_blank"><span class="footer__socials-bg"></span><img src="assets/img/icon-instagram.png" alt="instagram icon"></a>
+                <a class="footer-social-section__item" href="" target="_blank"><span class="footer__socials-bg"></span><img src="assets/img/icon-telegram.png" alt="instagram icon"></a>
             </div>
         </div>
     </footer>

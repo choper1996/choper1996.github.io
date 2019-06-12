@@ -72,7 +72,10 @@ img {
     content: '';
     background:url(../img/apple-logo.png);
     background-size: 100% auto;
+    z-index: 1;
 }
+
+
 
 .app-store-button__big-text {
     display: block;
@@ -173,9 +176,32 @@ img {
 }
 
 .nav-list-item {
+    position: relative;
+
+    margin-right: 80px;
+}
+
+.nav-list-item a {
+    display: block;
     font-size: 14px;
     font-weight: 300;
-    margin-right: 80px;
+}
+
+.nav-list-item:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -12px;
+    width: 2px;
+    height: 0px;
+    border-radius: 100px;
+    background-image: linear-gradient(45deg, #13c6b9 0%, #42d473 100%);
+    content: '';
+    transition: .3s;
+}
+
+.active.nav-list-item:before {
+    height: 11px;
 }
 
 nav-list-item:last-child {
@@ -209,7 +235,7 @@ nav-list-item:last-child {
     position: relative;
 }
 
-.main__slide-wrapper {
+.main__slide-wrapper, .registration__slide-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,7 +244,7 @@ nav-list-item:last-child {
     width: 300px;
 }
 
-.main__slider {
+.main__slider, .registration__slider {
     margin: 0 auto;
     width: 265px;
     position: absolute;
@@ -227,7 +253,6 @@ nav-list-item:last-child {
 .main__phone {
     width: 100%;
     filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
-    z-index: 1;
 }
 
 .main__list {
@@ -398,8 +423,18 @@ nav-list-item:last-child {
 }
 
 .registration-steps-list__item {
+    cursor: pointer;
     padding-left: 11px;
     margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.registration-steps-list__item.active {
+    transform: scale(1.15) translateX(25px);
+}
+
+.registration-steps-list__item.active .registration-steps-list__number:before {
+    left: -31px;
 }
 
 .registration-steps-list__item a {
@@ -430,6 +465,7 @@ nav-list-item:last-child {
     height: 2px;
     content: '';
     background-color: #000;
+    transition: .3s;
 }
 
 /*FOOTER*/
@@ -461,8 +497,44 @@ nav-list-item:last-child {
 }
 
 .footer .app-store-button {
-    background: linear-gradient(45deg, #13c6b9 0%, #42d473 100%);
+    height: 49px;
+    width: 137px;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
 }
+.footer .app-store-button:hover .app-store-gradient {
+    left: -100%;
+}
+
+.footer .app-store-button__big-text {
+    margin-left: 30px;
+}
+
+.app-store-gradient {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(45deg, #13c6b9 0%, #42d473 15%, #4fadfb 100%);
+    transition: .3s;
+    z-index: 0;
+}
+
+.button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
 
 .footer-links-list__item {
     margin-bottom: 30px;
@@ -479,19 +551,44 @@ nav-list-item:last-child {
 
 .footer__social-section {
     display: flex;
+    align-items: flex-start;
 }
 
 .footer-social-section__item {
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    display: block;
     margin-right: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer__social-section img {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.footer__socials-bg {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 200%;
+    transition: .3s;
+    background-color: #fff;
+    z-index: 0;
 }
 
 .footer-social-section__item:last-child {
     margin-right: 0;
 }
 
-.footer__social-section img {
-    width: 40px;
-}
+
 
 @media screen and (max-width: 1199.98px) {
     .video {
@@ -613,9 +710,59 @@ nav-list-item:last-child {
         justify-content: center;
     }
 
+    .main__slider, .registration__slider {
+        width: 195px;
+    }
+
+    .main-list__items.active {
+        transform: scale(1.15) translateX(20px);
+    }
+
 }
 
 @media screen and (max-width: 767.98px) {
+    .main__slide-wrapper, .registration__slide-wrapper {
+        width: auto;
+    }
+
+    .nav-list-wrapper {
+        overflow: inherit;
+
+    }
+
+    .nav-list {
+        height: 0;
+        width: auto;
+        padding: 30px;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: flex-end;
+        left: auto;
+        height: auto;
+        right: -30px;
+        overflow: hidden;
+        top: -200px;
+    }
+
+    .header.active .nav-list {
+        top: 36px;
+        left: auto;
+    }
+
+    .nav-list-item {
+        text-align: left;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-list-item:last-child{
+        margin-bottom: 0;
+    }
+
+    .main-list__items.active {
+        transform: scale(1.15) translateX(10px);
+    }
     /*GENERAL*/
     h1 {
         font-size: 30px;
@@ -749,9 +896,20 @@ nav-list-item:last-child {
         left: -6px;
         width: 12px;
     }
+
+
 }
 
 @media screen and (max-width: 575.98px) {
+    .main__slider, .registration__slider {
+        width: 170px;
+        margin-left: -15px;
+    }
+
+    .main-list__items.active {
+        transform: scale(1.15) translateX(0px);
+    }
+
     /*GENERAL*/
     .container {
         width: 320px;
