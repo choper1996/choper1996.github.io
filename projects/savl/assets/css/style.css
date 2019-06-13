@@ -72,7 +72,6 @@ img {
     content: '';
     background:url(../img/apple-logo.png);
     background-size: 100% auto;
-    z-index: 1;
 }
 
 
@@ -118,7 +117,7 @@ img {
     width: 25px;
     height: 2px;
     transition: .3s;
-    transform-origin: left;
+    transform-origin: center;
 }
 
 .header-burger__line:nth-child(1) {
@@ -135,21 +134,24 @@ img {
     width: 20px;
 }
 
+.header.active .header__burger {
+    width: 30px;
+    height: 25px;
+}
+
 .header.active .header-burger__line:nth-child(1) {
-    top:0;
-    transform: rotate(50deg);
+    top: 50%;
+    transform:translateY(-50%) rotate(50deg);
 }
 
 .header.active .header-burger__line:nth-child(2){
-    top:50%;
     opacity: 0;
-    transform: translateY(-50%);
 }
 
 .header.active .header-burger__line:nth-child(3){
-    bottom:-5px;
     width: 25px;
-    transform: rotate(-50deg);
+    top: 50%;
+    transform:translateY(-50%) rotate(-50deg);
 }
 
 .nav-list-wrapper {
@@ -219,6 +221,7 @@ nav-list-item:last-child {
 .main__content-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
     background: no-repeat url(../img/main-background.png) bottom center;
 }
 
@@ -227,11 +230,10 @@ nav-list-item:last-child {
 }
 
 .main__phone-wrapper {
-    width: 50%;
+    margin-right: 150px;
 }
 
 .main__text-wrapper {
-    width: 50%;
     position: relative;
 }
 
@@ -257,7 +259,6 @@ nav-list-item:last-child {
 
 .main__list {
     display: flex;
-    justify-content: space-between;
     margin: 52px 0;
 }
 
@@ -266,6 +267,13 @@ nav-list-item:last-child {
     padding-left: 46px;
     cursor: pointer;
     transition: .3s;
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.main-list__items:last-child {
+    margin-right: 0;
 }
 
 .main-list__items.active {
@@ -275,7 +283,6 @@ nav-list-item:last-child {
 .main-list__items:before {
     position: absolute;
     left: 0;
-    top: 0;
     height: 30px;
     width: 32px;
     content: '';
@@ -325,10 +332,6 @@ nav-list-item:last-child {
     background-size: auto 100%;
 }
 
-.abilities .container {
-    padding: 0;
-}
-
 .abilities__title {
     margin-bottom: 100px;
 }
@@ -366,11 +369,12 @@ nav-list-item:last-child {
 
 .abilities__text-wrapper {
     width: 50%;
+    padding-left: 10px;
 }
 
 .abilities-list__item {
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
     line-height: 30px;
     letter-spacing: 0.6px;
 }
@@ -429,13 +433,10 @@ nav-list-item:last-child {
     transition: 0.3s;
 }
 
-.registration-steps-list__item.active {
-    transform: scale(1.15) translateX(25px);
+.registration-steps-list__item:hover .registration-steps-list__number:before {
+    left: -35px;
 }
 
-.registration-steps-list__item.active .registration-steps-list__number:before {
-    left: -31px;
-}
 
 .registration-steps-list__item a {
     font-weight: 600;
@@ -458,7 +459,7 @@ nav-list-item:last-child {
 
 .registration-steps-list__number:before {
     position: absolute;
-    left: -11px;
+    left: -25px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
@@ -466,6 +467,13 @@ nav-list-item:last-child {
     content: '';
     background-color: #000;
     transition: .3s;
+}
+
+.registration-steps-list__item.active {
+}
+
+.registration-steps-list__item.active .registration-steps-list__number:before {
+    left: -50px;
 }
 
 /*FOOTER*/
@@ -503,6 +511,11 @@ nav-list-item:last-child {
     background-color: transparent;
     overflow: hidden;
 }
+
+.footer .app-store-button:before {
+    z-index: 1;
+}
+
 .footer .app-store-button:hover .app-store-gradient {
     left: -100%;
 }
@@ -606,6 +619,10 @@ nav-list-item:last-child {
     .footer__links-list {
         margin: 0 auto 0 auto;
     }
+
+    .main__phone-wrapper {
+        margin-right: 75px;
+    }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -620,6 +637,10 @@ nav-list-item:last-child {
 
     .main__title {
         margin-bottom: 50px;
+    }
+
+    .main__phone-wrapper {
+        margin-right: 30px;
     }
 
     .main__phone {
@@ -638,6 +659,7 @@ nav-list-item:last-child {
     .main-list__items {
         padding-left: 60px;
         margin-bottom: 27px;
+        margin-right: 0;
     }
 
     .abilities__content-wrapper {
@@ -731,9 +753,8 @@ nav-list-item:last-child {
     }
 
     .nav-list {
-        height: 0;
         width: auto;
-        padding: 30px;
+        padding: 25px;
         background-color: #fff;
         flex-direction: column;
         align-items: flex-end;
@@ -742,6 +763,7 @@ nav-list-item:last-child {
         right: -30px;
         overflow: hidden;
         top: -200px;
+        z-index: 3;
     }
 
     .header.active .nav-list {
@@ -753,7 +775,11 @@ nav-list-item:last-child {
         text-align: left;
         width: 100%;
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .nav-list-item a {
+        font-size: 16px;
     }
 
     .nav-list-item:last-child{
@@ -893,8 +919,16 @@ nav-list-item:last-child {
     }
 
     .registration-steps-list__number:before {
-        left: -6px;
+        left: -15px;
         width: 12px;
+    }
+
+    .registration-steps-list__item:hover .registration-steps-list__number:before {
+        left: -25px;
+    }
+
+    .registration-steps-list__item.active .registration-steps-list__number:before {
+        left: -35px;
     }
 
 
@@ -903,11 +937,18 @@ nav-list-item:last-child {
 @media screen and (max-width: 575.98px) {
     .main__slider, .registration__slider {
         width: 170px;
+    }
+
+    .main__slider {
         margin-left: -15px;
     }
 
     .main-list__items.active {
         transform: scale(1.15) translateX(0px);
+    }
+
+    .main__phone-wrapper {
+        margin-right: 0px;
     }
 
     /*GENERAL*/
@@ -1032,10 +1073,11 @@ nav-list-item:last-child {
 
     .registration__content-wrapper {
         flex-direction: column;
+        justify-content: center;
     }
 
     .registration__phone-wrapper, .registration__text-wrapper {
-        width: 100%;
+        width: auto;
     }
 
     .registration__phone-wrapper {
