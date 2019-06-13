@@ -59,8 +59,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let registrationListItem = document.querySelectorAll('.registration-steps-list__item');
 
-    $(registrationListItem).click(function() {
-        $(registrationSlider).slick('slickGoTo', +$(this).attr('id'));
+    registrationListItem.forEach((item)=> {
+        item.addEventListener('mouseover', ()=> {
+            $(registrationSlider).slick('slickGoTo', +$(this).attr('id'));
+        });
     });
 
     $(registrationSlider).on('beforeChange', function(event, slick, currentSlide, nextSlide){

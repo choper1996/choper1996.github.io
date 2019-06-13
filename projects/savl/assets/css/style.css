@@ -472,10 +472,6 @@ nav-list-item:last-child {
 .registration-steps-list__item.active {
 }
 
-.registration-steps-list__item.active .registration-steps-list__number:before {
-    left: -50px;
-}
-
 /*FOOTER*/
 .footer {
     padding: 80px 0 50px 0;
@@ -926,11 +922,6 @@ nav-list-item:last-child {
     .registration-steps-list__item:hover .registration-steps-list__number:before {
         left: -25px;
     }
-
-    .registration-steps-list__item.active .registration-steps-list__number:before {
-        left: -35px;
-    }
-
 
 }
 
