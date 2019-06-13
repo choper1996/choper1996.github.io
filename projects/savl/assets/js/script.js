@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     registrationListItem.forEach((item)=> {
         item.addEventListener('mouseover', ()=> {
-            $(registrationSlider).slick('slickGoTo', +$(this).attr('id'));
+            $(registrationSlider).slick('slickGoTo', +item.getAttribute('id'));
         });
     });
 
