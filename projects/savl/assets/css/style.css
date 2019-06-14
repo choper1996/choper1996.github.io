@@ -45,6 +45,8 @@ img {
 }
 
 .app-store-button {
+    display: block;
+    width: 138px;
     position: relative;
     border: 0;
     text-align: left;
@@ -524,10 +526,16 @@ nav-list-item:last-child {
     top: 0;
     width: 200%;
     height: 100%;
-    background: linear-gradient(45deg, #13c6b9 0%, #42d473 15%, #4fadfb 100%);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#13c6b9+0,42d473+50,13c6b9+75 */
+    background: #13c6b9; /* Old browsers */
+    background: -moz-linear-gradient(left,  #13c6b9 0%, #42d473 50%, #13c6b9 75%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #13c6b9 0%,#42d473 50%,#13c6b9 75%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #13c6b9 0%,#42d473 50%,#13c6b9 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13c6b9', endColorstr='#13c6b9',GradientType=1 ); /* IE6-9 */
     transition: .3s;
     z-index: 0;
 }
+
 
 .button-text {
     display: flex;
@@ -580,15 +588,23 @@ nav-list-item:last-child {
 }
 
 .footer__socials-bg {
-    display: none;
     position: absolute;
     left: 0;
     top: 0;
     height: 40px;
-    width: 200%;
+    width: 300%;
     transition: .3s;
-    background-color: #fff;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+36,42d473+75,13c6b9+99 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ffffff 0%, #ffffff 36%, #42d473 75%, #13c6b9 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ffffff 0%,#ffffff 36%,#42d473 75%,#13c6b9 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ffffff 0%,#ffffff 36%,#42d473 75%,#13c6b9 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#13c6b9',GradientType=1 ); /* IE6-9 */
     z-index: 0;
+}
+
+.footer-social-section__item:hover .footer__socials-bg {
+    left: -200%;
 }
 
 .footer-social-section__item:last-child {
@@ -737,6 +753,11 @@ nav-list-item:last-child {
 }
 
 @media screen and (max-width: 767.98px) {
+    .app-store-button {
+        width: 120px;
+        padding-bottom: 10px;
+    }
+
     .header .container {
         position: relative;
     }
@@ -877,6 +898,10 @@ nav-list-item:last-child {
 
     .app-store-button__big-text {
         font-size: 14px;
+    }
+
+    .footer .app-store-button__big-text {
+        margin-left: 10px;
     }
 
     .video__play, .video__play-hover {
