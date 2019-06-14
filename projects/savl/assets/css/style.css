@@ -926,6 +926,11 @@ nav-list-item:last-child {
         left: -25px;
     }
 
+    .registration-steps-list__number:before {
+        top: auto;
+        transform: translateY(-1px);
+    }
+
 }
 
 @media screen and (max-width: 575.98px) {
@@ -1082,11 +1087,6 @@ nav-list-item:last-child {
     .registration-steps-list__number {
         display: flex;
         align-items: center;
-    }
-
-    .registration-steps-list__number {
-        top: auto;
-        transform: translateY(-2px);
     }
 
     .registration__phone-wrapper {
