@@ -469,8 +469,6 @@ nav-list-item:last-child {
     transition: .3s;
 }
 
-.registration-steps-list__item.active {
-}
 
 /*FOOTER*/
 .footer {
@@ -953,6 +951,11 @@ nav-list-item:last-child {
         flex-direction: column;
     }
 
+    .main .app-store-button {
+        margin-left: 0;
+        width: 120px;
+    }
+
     .main:before {
         bottom: 25px;
     }
@@ -1069,6 +1072,16 @@ nav-list-item:last-child {
 
     .registration__phone-wrapper, .registration__text-wrapper {
         width: auto;
+    }
+
+    .registration-steps-list__number {
+        display: flex;
+        align-items: center;
+    }
+
+    .registration-steps-list__number {
+        top: auto;
+        transform: translateY(0px);
     }
 
     .registration__phone-wrapper {
