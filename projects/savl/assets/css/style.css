@@ -913,22 +913,20 @@ nav-list-item:last-child {
     }
 
     .registration-steps-list__number {
+        display: flex;
+        align-items: center;
         font-size: 19px;
         margin-right: 17px;
     }
 
     .registration-steps-list__number:before {
+        top: auto;
         left: -15px;
         width: 12px;
     }
 
     .registration-steps-list__item:hover .registration-steps-list__number:before {
         left: -25px;
-    }
-
-    .registration-steps-list__number:before {
-        top: auto;
-        transform: translateY(-1px);
     }
 
 }
