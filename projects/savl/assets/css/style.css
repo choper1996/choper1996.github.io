@@ -350,6 +350,7 @@ nav-list-item:last-child {
     position: relative;
 }
 .video-active {
+    display: block;
     width: 505px;
     height: 283px;
 }
@@ -364,6 +365,7 @@ nav-list-item:last-child {
     top: 50%;
     transform: translate(-50%, -50%);
     transition: .2s;
+    width: 86px;
 }
 
 .video__play-hover {
@@ -693,6 +695,7 @@ nav-list-item:last-child {
 
 
     .video-active {
+        margin: 0 auto;
         width: 345px;
         height: 193px;
     }

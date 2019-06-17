@@ -173,6 +173,8 @@ document.addEventListener("DOMContentLoaded", function() {
     iframe.classList.add('video-active');
 
     videoWrapper.addEventListener('click', ()=> {
+        // videoWrapper.style.backgroundColor = '#000';
+
        videoPreview.forEach((item)=> {
            item.remove();
        });
