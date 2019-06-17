@@ -435,11 +435,6 @@ nav-list-item:last-child {
     transition: 0.3s;
 }
 
-.registration-steps-list__item:hover .registration-steps-list__number:before {
-    left: -35px;
-}
-
-
 .registration-steps-list__item a {
     font-weight: 600;
     text-decoration: underline;
@@ -450,6 +445,7 @@ nav-list-item:last-child {
 }
 
 .registration-steps-list__number {
+    font-family: Avenir, sans-serif;
     position: relative;
     margin-right: 35px;
     font-size: 30px;
@@ -457,6 +453,7 @@ nav-list-item:last-child {
     background-image: linear-gradient(45deg, #13c6b9 0%, #42d473 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: 0.3s;
 }
 
 .registration-steps-list__number:before {
@@ -469,6 +466,15 @@ nav-list-item:last-child {
     content: '';
     background-color: #000;
     transition: .3s;
+}
+
+.registration-steps-list__item:hover .registration-steps-list__number:before, .registration-steps-list__item.active .registration-steps-list__number:before {
+    left: -35px;
+}
+
+.registration-steps-list__item.active .registration-steps-list__number {
+    transform: scale(1.15);
+    transform-origin: left;
 }
 
 
@@ -596,10 +602,10 @@ nav-list-item:last-child {
     transition: .3s;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+36,42d473+75,13c6b9+99 */
     background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(left,  #ffffff 0%, #ffffff 36%, #42d473 75%, #13c6b9 99%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  #ffffff 0%,#ffffff 36%,#42d473 75%,#13c6b9 99%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  #ffffff 0%,#ffffff 36%,#42d473 75%,#13c6b9 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#13c6b9',GradientType=1 ); /* IE6-9 */
+    background: -moz-linear-gradient(left,  #ffffff 0%, #ffffff 36%, #13c6b9 75%, #42d473 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ffffff 0%, #ffffff 36%, #13c6b9 75%, #42d473 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ffffff 0%, #ffffff 36%, #13c6b9 75%, #42d473 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#42d473',GradientType=1 ); /* IE6-9 */
     z-index: 0;
 }
 
@@ -1167,9 +1173,11 @@ nav-list-item:last-child {
 
     .footer-social-section__item {
         margin-right: 23px;
+        width: 33px;
+        height: 33px;
     }
 
     .footer__social-section img {
-        width: 33px;
+        width: 101%;
     }
 }

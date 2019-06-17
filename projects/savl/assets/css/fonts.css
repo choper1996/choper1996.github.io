@@ -7,12 +7,12 @@
         url('../fonts/Avenir/AvenirNextCyr-Medium.woff') format('woff'),
         url('../fonts/Avenir/AvenirNextCyr-Medium.ttf') format('truetype'),
         url('../fonts/Avenir/AvenirNextCyr-Medium.svg') format('svg'),
-
         url('../fonts/Avenir/AvenirNext-DemiBold.eot') format('embedded-opentype'),
         url('../fonts/Avenir/AvenirNext-DemiBold.woff2') format('woff2'),
         url('../fonts/Avenir/AvenirNext-DemiBold.woff') format('woff'),
         url('../fonts/Avenir/AvenirNext-DemiBold.ttf') format('truetype'),
         url('../fonts/Avenir/AvenirNext-DemiBold.svg') format('svg');
+        url('../fonts/Avenir/') format('embedded-opentype')
 }
 
 /*HELVETICA*/
