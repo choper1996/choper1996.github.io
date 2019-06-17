@@ -160,5 +160,25 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     });
 
+    // VIDEO
+    let videoPreview = document.querySelectorAll('.video > *'),
+        videoWrapper = document.querySelector('.video');
+
+    let iframe = document.createElement('iframe');
+
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/DuLIfzWo4sQ?autoplay=1');
+    iframe.setAttribute('frameborder' , '0');
+    iframe.setAttribute('allow' , '"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.classList.add('video-active');
+
+    videoWrapper.addEventListener('click', ()=> {
+       videoPreview.forEach((item)=> {
+           item.remove();
+       });
+
+        videoWrapper.appendChild(iframe);
+    });
 });
+
 

@@ -72,7 +72,7 @@ img {
     width: 22px;
     height: 28px;
     content: '';
-    background:url(../img/apple-logo.png);
+    background:url(../img/apple-logo.svg) no-repeat;
     background-size: 100% auto;
 }
 
@@ -186,6 +186,7 @@ img {
 }
 
 .nav-list-item a {
+    line-height: 100%;
     display: block;
     font-size: 14px;
     font-weight: 300;
@@ -348,6 +349,10 @@ nav-list-item:last-child {
     width: 505px;
     position: relative;
 }
+.video-active {
+    width: 505px;
+    height: 283px;
+}
 
 .video__preview {
     width: 100%;
@@ -465,16 +470,11 @@ nav-list-item:last-child {
     height: 2px;
     content: '';
     background-color: #000;
-    transition: .3s;
+    transition: .5s;
 }
 
 .registration-steps-list__item:hover .registration-steps-list__number:before, .registration-steps-list__item.active .registration-steps-list__number:before {
     left: -35px;
-}
-
-.registration-steps-list__item.active .registration-steps-list__number {
-    transform: scale(1.15);
-    transform-origin: left;
 }
 
 
@@ -624,6 +624,11 @@ nav-list-item:last-child {
         width: 50%;
     }
 
+    .video-active {
+        width: 465px;
+        height: 260px;
+    }
+
     .abilities-list {
         padding-left: 55px;
     }
@@ -684,6 +689,12 @@ nav-list-item:last-child {
 
     .video  {
         margin: 0 auto 50px auto;
+    }
+
+
+    .video-active {
+        width: 345px;
+        height: 193px;
     }
 
     .abilities__text-wrapper {
@@ -910,6 +921,12 @@ nav-list-item:last-child {
         margin-left: 10px;
     }
 
+
+    .video-active {
+        width: 255px;
+        height: 143px;
+    }
+
     .video__play, .video__play-hover {
         width: 40px;
     }
@@ -947,6 +964,7 @@ nav-list-item:last-child {
         display: flex;
         align-items: center;
         font-size: 19px;
+        line-height: 100%;
         margin-right: 17px;
     }
 
@@ -956,7 +974,7 @@ nav-list-item:last-child {
         width: 12px;
     }
 
-    .registration-steps-list__item:hover .registration-steps-list__number:before {
+    .registration-steps-list__item:hover .registration-steps-list__number:before, .registration-steps-list__item.active .registration-steps-list__number:before {
         left: -25px;
     }
 
