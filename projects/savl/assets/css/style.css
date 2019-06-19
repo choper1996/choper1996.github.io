@@ -359,6 +359,10 @@ nav-list-item:last-child {
     width: 100%;
 }
 
+.video__preview source, .video__preview img {
+    width: 100%;
+}
+
 .video__play, .video__play-hover {
     position: absolute;
     left: 50%;

@@ -26,7 +26,7 @@
                 <ul class="nav-list">
                     <li class="nav-list-item"><a href="#main">Главная</a></li>
                     <li class="nav-list-item"><a href="#abilities">Возможности</a></li>
-                    <li class="nav-list-item"><a href="#registration">Регистрация</a></li>
+                    <li class="nav-list-item" id="last-nav"><a href="#registration">Регистрация</a></li>
                 </ul>
             </nav>
             <div class="header__burger">
@@ -58,7 +58,7 @@
                         <li class="main-list__items" id="1">Плати</li>
                         <li class="main-list__items" id="2">Обменивай</li>
                     </ul>
-                    <a class="app-store-button">Скачать с <span class="app-store-button__big-text">App Store</span></a>
+                    <a href="https://apps.apple.com/us/app/savl/id1369912925?l=ru&ls=1" class="app-store-button" target="_blank">Скачать с <span class="app-store-button__big-text">App Store</span></a>
                     <div class="main__down-button-mobile">
                         <img src="assets/img/icon-arrow-down.svg" alt="arrow down">
                     </div>
@@ -73,7 +73,10 @@
                 <h2 class="abilities__title">Возможности <br>нашего приложения</h2>
                 <div class="abilities__content-wrapper">
                     <div class="video">
-                        <img class="video__preview" src="assets/img/video-background.jpg" alt="savl video">
+                        <picture class="video__preview">
+                        	<source  srcset="https://i.ytimg.com/vi_webp/DuLIfzWo4sQ/maxresdefault.webp" type="image/webp">
+                        	<img class="video__media" src="https://i.ytimg.com/vi/DuLIfzWo4sQ/maxresdefault.jpg" alt="savl">
+                        </picture>
                         <img class="video__play-hover" src="assets/img/icon-play-hover.svg" alt="play">
                         <img class="video__play" src="assets/img/icon-play.svg" alt="play">
                     </div>
@@ -84,7 +87,7 @@
                             <li class="abilities-list__item">Зашифрованный мессенджер <br> по технологии <b>end-to-end</b></li>
                             <li class="abilities-list__item">Обмен криптовалюты на реальную валюту</li>
                         </ul>
-                        <a href="" class="app-store-button">Скачать с <span class="app-store-button__big-text">App Store</span></a>
+                        <a href="https://apps.apple.com/us/app/savl/id1369912925?l=ru&ls=1" class="app-store-button" target="_blank">Скачать с <span class="app-store-button__big-text">App Store</span></a>
                     </div>
                 </div>
             </div>
@@ -105,7 +108,7 @@
                     </div>
                     <div class="registration__text-wrapper">
                         <ul class="registration__steps-list">
-                            <li class="registration-steps-list__item active" id="0"><span class="registration-steps-list__number">01</span> <span>Скачать приложение в <a target="_blank" href="">App Store</a></span></li>
+                            <li class="registration-steps-list__item active" id="0"><span class="registration-steps-list__number">01</span> <span>Скачать приложение в <a href="https://apps.apple.com/us/app/savl/id1369912925?l=ru&ls=1" target="_blank" href="">App Store</a></span></li>
                             <li class="registration-steps-list__item" id="1"><span class="registration-steps-list__number">02</span> <span>Создать кошелёк</span></li>
                             <li class="registration-steps-list__item" id="2"><span class="registration-steps-list__number">03</span> <span>Пополнить кошелек</span></li>
                         </ul>
@@ -115,12 +118,12 @@
         </article>
     </main>
     <!--FOOTER-->
-    <footer class="footer even-blocks">
+    <footer class="footer even-blocks" id="footer">
         <div class="container footer__content-wrap">
             <div class="footer__info-section">
                 <img class="footer__logo" src="assets/img/logo-white.svg" alt="savl logo">
                 <p class="footer-ifo-section__paragraph">SAVL GmbH, c/o Schwärzler Rechtsanwälte, Baarerstr. 75, 6300 <br> Zug, Kanton Zug, Schweiz Registerangaben: Kanton Zug <br> Unternehmensnummer: CHE-365.396.532</p>
-                <a href="" class="app-store-button"><span class="app-store-gradient"></span><div class="button-text">Скачать с <span class="app-store-button__big-text">App Store</span></div></a>
+                <a href="https://apps.apple.com/us/app/savl/id1369912925?l=ru&ls=1" class="app-store-button"  target="_blank"><span class="app-store-gradient"></span><div class="button-text">Скачать с <span class="app-store-button__big-text">App Store</span></div></a>
             </div>
             <ul class="footer__links-list">
                 <li class="footer-links-list__item"><a href="assets/documents/privacy.pdf" target="_blank">Privacy policy</a></li>
@@ -130,7 +133,7 @@
                 <a class="footer-social-section__item" href="https://vk.com/savl_official" target="_blank"><span class="footer__socials-bg"></span><img src="assets/img/icon-vk.svg" alt="vk icon"></a>
                 <a class="footer-social-section__item" href="https://www.facebook.com/savl.official" target="_blank"><span class="footer__socials-bg"></span><img src="assets/img/icon-facebook.svg" alt="facebook icon"></a>
                 <a class="footer-social-section__item" href="https://www.instagram.com/savl_official/" target="_blank"><span class="footer__socials-bg"></span><img src="assets/img/icon-instagram.svg" alt="instagram icon"></a>
-                <a class="footer-social-section__item" href="" target="_blank"><span class="footer__socials-bg"></span><img src="assets/img/icon-telegram.svg" alt="instagram icon"></a>
+               
             </div>
         </div>
     </footer>

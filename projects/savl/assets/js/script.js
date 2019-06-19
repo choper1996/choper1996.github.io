@@ -81,7 +81,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let mainY       = document.querySelector('#main').getBoundingClientRect().bottom,
             abilities  = document.querySelector('#abilities').getBoundingClientRect().top,
-            registration = document.querySelector('#registration').getBoundingClientRect().top;
+            abilitiesBot  = document.querySelector('#abilities').getBoundingClientRect().bottom,
+            registration = document.querySelector('#registration').getBoundingClientRect().top,
+            footer = document.querySelector('#footer').getBoundingClientRect().top;
 
 
         if (mainY > 0) {
@@ -101,6 +103,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if (registration < 100 && registration > -100) {
+            navLinks.forEach((item)=>{
+                item.classList.remove('active');
+            });
+
+            navLinks[2].classList.add('active');
+        }
+
+        if (abilitiesBot < 400) {
             navLinks.forEach((item)=>{
                 item.classList.remove('active');
             });
@@ -157,8 +167,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 behavior: 'smooth',
                 block: 'start'
             });
+
+            item.classList.add('active');
         })
     });
+
 
     // VIDEO
     let videoPreview = document.querySelectorAll('.video > *'),
