@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+	// LINKS
+	let appStoreLinks = document.querySelectorAll('.app-store-button');
+
+	appStoreLinks.forEach((item)=> {
+		item.addEventListener('click', () => {
+			document.location.href = "https://apps.apple.com/us/app/savl/id1369912925?l=ru&ls=1"
+		})
+	});
 
     // HEADER
     let burger = document.querySelector('.header__burger'),
@@ -117,6 +125,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
             navLinks[2].classList.add('active');
         }
+    });
+
+    navLinks.forEach((item)=>{
+        item.addEventListener('click', ()=> {
+           header.classList.remove('active');
+        });
     });
 
     // ANCHOR LINKS

@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Slab|Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/slick.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
-    <title>Good way - Стань водителем бизнес - класса</title>
+    <title>Goodway</title>
 </head>
 <body>
     <!--HEADER-->
@@ -19,13 +21,14 @@
             <a href="#main" class="header__anchor-to-main">
                 <img class="header__logo" src="assets/img/logo-goodway-black.png" alt="Goodway logo">
             </a>
+            <img class="header__burger" src="assets/img/icon-burger.png" alt="burger menu">
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-list__items"><a href="#main">Аренда авто</a></li>
-                    <li class="nav-list__items"><a href="#main">Трудоустройство</a></li>
-                    <li class="nav-list__items"><a href="#main">Возможности</a></li>
-                    <li class="nav-list__items"><a href="#main">Условия работы</a></li>
-                    <li class="nav-list__items"><a href="#main">Контакты</a></li>
+                    <li class="nav-list__items"><a href="#info">Аренда авто</a></li>
+                    <li class="nav-list__items"><a href="#opportunity">Трудоустройство</a></li>
+                    <li class="nav-list__items"><a href="#bonuses">Условия работы</a></li>
+                    <li class="nav-list__items"><a href="#motivation">Возможности</a></li>
+                    <li class="nav-list__items"><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
             <div class="header__contacts">
@@ -65,22 +68,22 @@
                     <section class="info-content-wrapper__item">
                         <h2 class="info__subtitle">Ищем водителей, <br> готовых к премиум - условиям.</h2>
                         <p class="info__paragraph">Берите заказы, работая на известных <br> агрегаторах — Wheely, Yandex.Taxi, Gett.</p>
-                        <p class="info__paragraph">Доход от 85 000 до 135 000</p>
+                            <p class="info__paragraph">Доход от 85 000 до 135 000</p>
                     </section>
-                    <section class="info-content-wrapper__item">
-                        <h2 class="info__subtitle">А также сдаём в аренду Mercedes <br> всем желающим</h2>
+                    <section class="info-content-wrapper__item info__leasing-wrapper">
+                        <h2 class="info__subtitle leasing__subtitle">А также сдаём в аренду Mercedes <br> всем желающим</h2>
                         <p class="info__paragraph">Арендуйте автомобиль бизнес - класса <br> <b>за 4 200 рублей!</b></p>
                         <button class="transparent info__more-btn">Подробнее</button>
                     </section>
-                    <section class="info-content-wrapper__item">
+                    <section class="info-content-wrapper__item info__list-wrapper">
                         <ul class="info__list">
                             <li class="info-list__item">Нет залога</li>
                             <li class="info-list__item">Надёжная обратная связь</li>
                             <li class="info-list__item">Официальное трудоустройство</li>
                         </ul>
+                        <button class="call-form">Стать водителем</button>
                     </section>
                 </div>
-                <button class="call-form">Стать водителем</button>
             </div>
         </article>
         <!--ABILITIES-->
@@ -90,18 +93,12 @@
                 <div class="abilities__content-wrapper">
                     <section class="abilities-content-wrapper__item">
                         <p class="abilities__subtitle">Иностранное гражданство — <br> не проблема</p>
-                        <p class="abilities__paragraph">Принимаем на работу граждан
-                            РФ, СНГ и других стран.
-                            Знание английского языка будет
-                            преимуществом при
-                            трудоустройстве.
+                        <p class="abilities__paragraph">Принимаем на работу граждан <br> РФ, СНГ и других стран. <br> Знание английского языка будет <br> преимуществом при <br> трудоустройстве.
                         </p>
                     </section>
                     <section class="abilities-content-wrapper__item">
                         <p class="abilities__subtitle">Работа <br> в день обращения</p>
-                        <p class="abilities__paragraph">Ждать не нужно!
-                            Зарегистрируйтесь — и сразу
-                            начинайте получать заказы.
+                        <p class="abilities__paragraph">Ждать не нужно! <br> Зарегистрируйтесь — и сразу <br> начинайте получать заказы.
                         </p>
                     </section>
                     <section class="abilities-content-wrapper__item">
@@ -125,7 +122,7 @@
             </div>
         </article>
         <!--OPPORTUNITY-->
-       <article class="opportunity">
+       <article class="opportunity" id="opportunity">
            <div class="container">
                <h1 class="opportunity__title">Как устроиться на работу в <span class="red-word">Goodway</span></h1>
                <div class="opportunity__content-wrapper">
@@ -149,19 +146,31 @@
         <article class="requirements">
             <div class="container">
                 <h1 class="requirements__title">Требования к водителям</h1>
-                <ul>
+                <ul class="requirements__list">
                     <li class="requirements-list__item">Опыт работы <b>1-3 года</b></li>
                     <li class="requirements-list__item">Водительские права категории В и <b>стаж вождения от 3 лет</b></li>
                     <li class="requirements-list__item">Великолепное знание Москвы и ближайшего Подмосковья</li>
                     <li class="requirements-list__item">Действующий аккаунт <b>Wheely, GETT</b> <br> (послужит дополнительным преимуществом)</li>
                     <li class="requirements-list__item">Грамотная речь, уравновешенность, тактичность, <br> коммуникабельность</li>
-                    <li class="requirements-list__item">Тщательное соблюдение дресс - кода <br> <b>костюм туфли галстук</b></li>
+                    <li class="requirements-list__item">Тщательное соблюдение дресс - кода <br> <b class="dress"><span>костюм</span> <span>туфли</span> <span>галстук</span></b></li>
                     <li class="requirements-list__item">Бережное отношение к автомобилю, чувство ответственности <br> за безопасность пассажиров</li>
                     <li class="requirements-list__item">Приветствуется знание иностранных языков</li>
                 </ul>
+                <div class="dress-mobile">
+                    <ul class="dress-mobile__list">
+                        <li><b>костюм</b></li>
+                        <li><b>туфли</b></li>
+                        <li><b>галстук</b></li>
+                    </ul>
+                </div>
+                <div class="red-line"></div>
+                <div class="requirements__paragraphs">
+                    <p>Мы заботимся о репутации и делаем всё возможное, чтобы и сотрудникам,и клиентам было комфортно — <br> именно поэтому предоставляем новые автомобили и бесплатные сервисные услуги. Мы уважаем наших водителей, <br> ценим их труд и всегда выполняем свои обязательства.</p>
+                    <p>Наша политика — честность и прозрачность: вы застрахованы от таких сюрпризов как списания <br> и скрытые платежи. Проводим цикл обучения, помогаем с трудоустройством. <br> Гарантируем своевременные выплаты.</p>
+                </div>
             </div>
         </article>
-        <article class="bonuses">
+        <article class="bonuses" id="bonuses">
             <div class="container">
                 <h1 class="bonuses__title">Приятные бонусы от <span class="red-word">Goodway</span></h1>
                 <div class="bonuses__content-wrapper">
@@ -184,7 +193,6 @@
                             <li class="bonuses-list__item-more">Мойку автомобиля</li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </article>
@@ -231,13 +239,13 @@
                 </div>
             </div>
         </article>
-        <article class="motivation">
+        <article class="motivation" id="motivation">
             <div class="container">
                 <h1 class="motivation__title">Хотите зарабатывать самостоятельно, <br> взяв в аренду автомобиль?</h1>
                 <p class="motivation__subtitle">Помимо официального трудоустройства <span class="red-word">Goodway</span> <br> предоставляет возможность арендовать автомобиль на любой срок.</p>
                 <p class="motivation__subtitle"><b>Рассчитайте свой доход с помощью онлайн-калькулятора</b></p>
                 <div class="motivation__content-wrapper">
-                    <div>
+                    <div class="calculator">
                         <div class="calculator__range-by-hours-section">
                             <p><b>Сколько часов в день планируете <br> работать?</b> Стоимость 1 часа 810 руб.</p>
                             <input class="calculator__range" type="range" min="1" max="10" step="1" value="5">
@@ -274,11 +282,11 @@
                     </div>
                     <div class="calculator-result-wrapper">
                         <p>Сумма вашего заработка <br> за месяц составляет:</p>
-                        <p class="calculator__result-value bold">400 000 Р</p>
+                        <p class="calculator__result-value bold">400 000 руб.</p>
                     </div>
-                    <div>
-                        <p class="characteristics-list__title"><b>Характеристики автомобиля</b></p>
+                    <div class="characteristics">
                         <ul class="characteristics__list">
+                            <p class="characteristics-list__title"><b>Характеристики автомобиля</b></p>
                             <li class="characteristics-list__items">Тип привода Полный <span>(4WD)</span></li>
                             <li class="characteristics-list__items">Тип кузова  <span>Седан</span></li>
                             <li class="characteristics-list__items">Тип трансмиссии  <span>АКПП 9</span></li>
@@ -298,23 +306,37 @@
                 <button class="call-form">Арендовать авто</button>
                 <div class="about__sliders-wrapper">
                     <section class="tax-slider-wrapper">
-                        <h2>Наш таксопарк</h2>
+                        <h2 class="about-slider__title">Наш таксопарк</h2>
                         <div class="tax-slider">
                             <img src="assets/img/tax-slide-1.jpg" alt="goodway">
                             <img src="assets/img/tax-slide-1.jpg" alt="goodway">
                             <img src="assets/img/tax-slide-1.jpg" alt="goodway">
                         </div>
+                        <h2 class="about-slider__title-mobile">Наш таксопарк</h2>
                     </section>
                     <section class="car-slider-wrapper">
-                        <h2>Наши автомобили</h2>
+                        <h2 class="about-slider__title">Наши автомобили</h2>
                         <div class="car-slider">
                             <img src="assets/img/car-slide-1.jpg" alt="goodway">
                             <img src="assets/img/car-slide-1.jpg" alt="goodway">
                             <img src="assets/img/car-slide-1.jpg" alt="goodway">
                         </div>
+                        <h2 class="about-slider__title-mobile">Наши автомобили</h2>
                     </section>
                 </div>
                 <p class="about__paragraph">Таксопарк <span class="red-word">Goodway</span> — это 50 автомобилей Mercedes и собственная ремонтная мастерская</p>
+                <div class="red-line"></div>
+                <h2 class="about__title">О компании</h2>
+                <p class="about__paragraph">
+                    <b><span class="red-word">Goodway</span></b>  — это стремительно развивающийся таксопарк
+                    с собственным центром технического обслуживания.
+                    Всего 5 лет назад у нас был небольшой парк
+                    автомобилей эконом-класса, выросший на
+                    сегодняшний день до 500 единиц
+                    (Kia Rio, Hyundai Solaris, VW Polo и др.)
+                    А в категории бизнес-класса у нас более 30
+                    автомобилей Mercedes-Benz W213.
+                </p>
             </div>
         </article>
         <article class="offer">
@@ -338,20 +360,28 @@
                 <div class="partners">
                     <h1 class="partners__title ">Наши партнеры</h1>
                     <div class="partners__wrapper">
-                        <img src="assets/img/logo-partners-whelly.png" alt="whelly">
-                        <img src="assets/img/logo-partners-gettaxi.png" alt="Gett такси">
-                        <img src="assets/img/logo-partners-yandex.png" alt="Яндекс такси">
-                        <img src="assets/img/logo-partners-citymobil.png" alt="Ситимобил">
+                        <div class="partners-wrapper__item">
+                            <img src="assets/img/logo-partners-whelly.png" alt="whelly">
+                        </div>
+                        <div class="partners-wrapper__item">
+                            <img src="assets/img/logo-partners-gettaxi.png" alt="Gett такси">
+                        </div>
+                        <div class="partners-wrapper__item">
+                            <img src="assets/img/logo-partners-yandex.png" alt="Яндекс такси">
+                        </div>
+                        <div class="partners-wrapper__item">
+                            <img src="assets/img/logo-partners-citymobil.png" alt="Ситимобил">
+                        </div>
                     </div>
                 </div>
             </div>
         </article>
-        <article class="contacts">
+        <article class="contacts" id="contacts">
             <div class="container">
                 <h1 class="contact__title">Контакты</h1>
                 <div class="contacts__content-wrapper">
                     <div class="contact__card">
-                        <p>Ждём вашего звонка: <b>+7 (985) 419 - 91 - 92</b> <br> или сообщения в WhatsUp: <b>8 (985) 419 - 91 - 92</b> <br> либо на e-mail: <b>goodway.moscow@yandex.ru</b></p>
+                        <p>Ждём вашего звонка: <br class="contact__mobile-break"> <b>+7 (985) 419 - 91 - 92</b> <br> или сообщения в WhatsUp: <br class="contact__mobile-break"> <b>8 (985) 419 - 91 - 92</b> <br> либо на e-mail: <b>goodway.moscow@yandex.ru</b></p>
                         <p>Или приходите к нам по адресу: <br> <b>г. Москва ул. Ярославская д. 8, кор. 6</b></p>
                         <img  class="contact-card__bg" src="assets/img/contact-card-bg.png" alt="bg">
                     </div>
@@ -364,7 +394,7 @@
                     </div>
                 </div>
             </div>
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae7a7f2f9e313d8b5ef3aa51d488cdf6f2945917135b8d33371b476701b9c3557&amp;source=constructor" width="100%" height="547" frameborder="0"></iframe>
+            <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae7a7f2f9e313d8b5ef3aa51d488cdf6f2945917135b8d33371b476701b9c3557&amp;source=constructor" width="100%" height="547" frameborder="0"></iframe>
             <div class="container social">
                 <p>Мы в соц сетях</p>
                 <div class="social__wrapper">
@@ -374,15 +404,45 @@
                 </div>
             </div>
         </article>
+        <article class="modal">
+            <div class="container">
+                <form action="">
+                    <p class="modal__title">Заполните форму и отправьте свои данные, <br> чтобы мы с вами связались</p>
+                    <div class="modal-inputs-wrap">
+                        <input class="name-input"  required placeholder="Имя*" type="text">
+                        <input class="phone-input"  required placeholder="Телефон*" type="number">
+                        <input placeholder="Электронная почта" type="text">
+                    </div>
+                    <button class="modal__button">Отправить</button>
+                    <div class="modal-check-wrapper">
+                        <div>
+                            <div class="checkbox"></div>
+                        </div>
+                        <p class="modal-check-wrapper__paragraph">Согласие на обработку персональных данных</p>
+                    </div>
+                    <div class="modal__close-button"></div>
+                    <div class="modal__error-window">
+                        <p class="modal-error__title bold">Ошибка!</p>
+                        <p class="modal-error__paragraph"></p>
+                        <button class="modal-error__back-button">Назад</button>
+                    </div>
+                    <div class="modal__success-window">
+                        <img class="success-window__img" src="assets/img/icon-succes.png" alt="success">
+                        <p class="modal-success__paragraph">Ваша заявка успешно отправлена!</p>
+                        <button class="modal-success__button">Ок</button>
+                    </div>
+                </form>
+            </div>
+        </article>
     </main>
     <footer class="footer">
         <div class="footer-wrapper container">
             <div>
                <img class="footer__logo" src="assets/img/logo-goodway-white.png" alt="goodway logo">
-                <p>Информация о лицензии, сведения <br> о юридическом лице, политика <br> конфидденциальности</p>
+                <p class="footer__info">Информация о лицензии, сведения <br> о юридическом лице, политика <br> конфидденциальности</p>
             </div>
             <button>Заказать звонок</button>
-            <nav>
+            <nav class="footer__nav">
                 <ul class="footer-nav-list">
                     <li class="footer-nav-list__items"><a href=".main">Главная</a></li>
                     <li class="footer-nav-list__items"><a href=".be-driver">Услуги</a></li>

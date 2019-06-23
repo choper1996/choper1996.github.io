@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+    // AOS.init();
+
     // MAIN BACKGROUND SLIDER
     let mainSlider      = document.querySelector('.main-background-slider');
     let mainDotsWrapper = document.querySelector('.main-background-slider__dots-wrapper');
@@ -99,7 +101,7 @@ $( document ).ready(function() {
         daysRange = document.querySelector('.calculator__range-by-days-section > input'),
         result = document.querySelector('.calculator__result-value');
 
-    result.innerText = `${(+daysRange.value * +hoursRange.value) * 810} Р`;
+    result.innerText = `${(+daysRange.value * +hoursRange.value) * 810} руб.`;
 
     let hoursPercent = 0.09,
         daysPercent  = 0.1;
@@ -108,12 +110,12 @@ $( document ).ready(function() {
     daysRange.style.background = `-webkit-linear-gradient(left ,#b1041f 0%,#b1041f ${((daysRange.value - 15) / daysPercent).toFixed()}%,#f2d9dd ${((daysRange.value - 15) / daysPercent).toFixed()}%, #f2d9dd 100%)`;
 
     let changeDaysRange = function () {
-        result.innerText = `${(+daysRange.value * +hoursRange.value) * 810} Р`;
+        result.innerText = `${(+daysRange.value * +hoursRange.value) * 810} руб.`;
         hoursRange.style.background = `-webkit-linear-gradient(left ,#b1041f 0%,#b1041f ${((hoursRange.value - 1) / hoursPercent).toFixed()}%,#f2d9dd ${((hoursRange.value - 1) / hoursPercent).toFixed()}%, #f2d9dd 100%)`;
     };
 
     let changeHoursValue = function () {
-        result.innerText = `${(+daysRange.value * +hoursRange.value) * 810} Р`;
+        result.innerText = `${(+daysRange.value * +hoursRange.value) * 810} руб.`;
         daysRange.style.background = `-webkit-linear-gradient(left ,#b1041f 0%,#b1041f ${((daysRange.value - 15) / daysPercent).toFixed()}%,#f2d9dd ${((daysRange.value - 15) / daysPercent).toFixed()}%, #f2d9dd 100%)`;
     };
 
@@ -137,70 +139,77 @@ $( document ).ready(function() {
     let header = document.querySelector('.header'),
         navLinks = document.querySelectorAll('.nav-list__items');
 
-    // window.addEventListener('scroll', ()=> {
-    //
-    //     let mainY       = document.querySelector('.main').getBoundingClientRect().bottom,
-    //         beDriverY   = document.querySelector('.be-driver').getBoundingClientRect().top,
-    //         workWithUsY = document.querySelector('.work-with-us').getBoundingClientRect().top,
-    //         advantagesY = document.querySelector('.advantages').getBoundingClientRect().top,
-    //         contactsY   = document.querySelector('.contacts').getBoundingClientRect().top;
-    //
-    //     if (mainY < 10) {
-    //         header.style.position = 'fixed';
-    //         header.style.top = '0';
-    //         header.style.backgroundColor = '#fff';
-    //     }
-    //
-    //     if (mainY > 10 && mainY < 100) {
-    //         header.style.top = '-150px';
-    //     }
-    //
-    //     if (mainY > 110) {
-    //         header.style.top = '0';
-    //         header.style.position = 'absolute';
-    //         header.style.backgroundColor = 'transparent';
-    //     }
-    //
-    //     if (mainY > 0) {
-    //         navLinks.forEach((item)=>{
-    //             item.classList.remove('active');
-    //         });
-    //
-    //         navLinks[0].classList.add('active');
-    //     }
-    //
-    //     if (beDriverY < 100 && beDriverY > -100) {
-    //         navLinks.forEach((item)=>{
-    //             item.classList.remove('active');
-    //         });
-    //
-    //         navLinks[1].classList.add('active');
-    //     }
-    //
-    //     if (workWithUsY < 100 && workWithUsY > -100) {
-    //         navLinks.forEach((item)=>{
-    //             item.classList.remove('active');
-    //         });
-    //
-    //         navLinks[2].classList.add('active');
-    //     }
-    //
-    //     if (advantagesY < 100 && advantagesY > -100) {
-    //         navLinks.forEach((item)=>{
-    //             item.classList.remove('active');
-    //         });
-    //
-    //         navLinks[3].classList.add('active');
-    //     }
-    //
-    //     if (contactsY < 100 && contactsY > -100) {
-    //         navLinks.forEach((item)=>{
-    //             item.classList.remove('active');
-    //         });
-    //
-    //         navLinks[4].classList.add('active');
-    //     }
-    // });
+    window.addEventListener('scroll', ()=> {
+
+        let mainY        = document.querySelector('#main').getBoundingClientRect().bottom,
+            infoY        = document.querySelector('#info').getBoundingClientRect().top,
+            opportunityY = document.querySelector('#opportunity').getBoundingClientRect().top,
+            bonusesY     = document.querySelector('#bonuses').getBoundingClientRect().top,
+            motivationY  = document.querySelector('#motivation').getBoundingClientRect().top,
+            contactsY    = document.querySelector('#contacts').getBoundingClientRect().top;
+
+        if (mainY < 10) {
+            header.style.position = 'fixed';
+            header.style.top = '0';
+            header.style.backgroundColor = '#fff';
+        }
+
+        if (mainY > 10 && mainY < 100) {
+            header.style.top = '-150px';
+        }
+
+        if (mainY > 110) {
+            header.style.top = '0';
+            header.style.position = 'absolute';
+            header.style.backgroundColor = 'transparent';
+        }
+
+        if (mainY > 0) {
+            navLinks.forEach((item)=>{
+                item.classList.remove('active');
+            });
+        }
+
+        if (infoY < 100 && infoY > -100) {
+            navLinks.forEach((item)=>{
+                item.classList.remove('active');
+            });
+
+            navLinks[0].classList.add('active');
+        }
+
+        if (opportunityY < 100 && opportunityY > -100) {
+            navLinks.forEach((item)=>{
+                item.classList.remove('active');
+            });
+
+            navLinks[1].classList.add('active');
+        }
+
+        if (bonusesY < 100 && bonusesY > -100) {
+            navLinks.forEach((item)=>{
+                item.classList.remove('active');
+            });
+
+            navLinks[2].classList.add('active');
+        }
+
+        if (motivationY < 100 && motivationY > -100) {
+            navLinks.forEach((item)=>{
+                item.classList.remove('active');
+            });
+
+            navLinks[3].classList.add('active');
+        }
+
+        if (contactsY < 100 && contactsY > -100) {
+            navLinks.forEach((item)=>{
+                item.classList.remove('active');
+            });
+
+            navLinks[4].classList.add('active');
+        }
+    });
 
     // ANCHOR LINKS
     let footerNavLinks = document.querySelectorAll('.footer-nav-list__items');
@@ -262,13 +271,13 @@ $( document ).ready(function() {
         },200)
     };
 
-    // checkbox.addEventListener('click', ()=> {
-    //     checkbox.classList.toggle('active');
-    // });
+    checkbox.addEventListener('click', ()=> {
+        checkbox.classList.toggle('active');
+    });
 
-    // closeModalButton.addEventListener('click', ()=> {
-    //     closeModal();
-    // });
+    closeModalButton.addEventListener('click', ()=> {
+        closeModal();
+    });
 
     // CALL MODAL
     let callFormElements = document.querySelectorAll('.call-form');
@@ -287,53 +296,53 @@ $( document ).ready(function() {
     });
 
     // SUBMIT FORM
-    // let submitButton   = document.querySelector('.modal__button'),
-    //     backButton     = document.querySelector('.modal-error__back-button'),
-    //     successButton  = document.querySelector('.modal-success__button'),
-    //     errorWindow    = document.querySelector('.modal__error-window'),
-    //     successWindow  = document.querySelector('.modal__success-window'),
-    //     errorMessage   = document.querySelector('.modal-error__paragraph'),
-    //     nameInput      = document.querySelector('.name-input'),
-    //     phoneInput     = document.querySelector('.phone-input');
-    //
-    // backButton.addEventListener('click', (e)=> {
-    //     e.preventDefault();
-    //
-    //     errorWindow.style.left = '-100%';
-    // });
-    //
-    // submitButton.addEventListener('click', (e)=> {
-    //     e.preventDefault();
-    //
-    //     let required = false,
-    //         checked  = false;
-    //
-    //     if (!(nameInput.value === '' || phoneInput.value === '')) {
-    //         required = true;
-    //     }
-    //
-    //     if (checkbox.classList.contains('active')) {
-    //         checked = true;
-    //     }
-    //
-    //     if (required === false) {
-    //         errorWindow.style.left = '0';
-    //         errorMessage.innerHTML = 'Поля, которые обязательно нужно заполнить - пустые. Проверьте свои данные и попробуйте еще раз.';
-    //         return false;
-    //     } else if (checked === false) {
-    //         errorWindow.style.left = '0';
-    //         errorMessage.innerHTML = 'Перед отправкой данных вы должны согласиться на обработку персональных данных.';
-    //         return false;
-    //     } else {
-    //         successWindow.style.left = '0'
-    //     }
-    //
-    // });
-    //
-    // successButton.addEventListener('click', (e)=> {
-    //     e.preventDefault();
-    //     closeModal();
-    // });
+    let submitButton   = document.querySelector('.modal__button'),
+        backButton     = document.querySelector('.modal-error__back-button'),
+        successButton  = document.querySelector('.modal-success__button'),
+        errorWindow    = document.querySelector('.modal__error-window'),
+        successWindow  = document.querySelector('.modal__success-window'),
+        errorMessage   = document.querySelector('.modal-error__paragraph'),
+        nameInput      = document.querySelector('.name-input'),
+        phoneInput     = document.querySelector('.phone-input');
+
+    backButton.addEventListener('click', (e)=> {
+        e.preventDefault();
+
+        errorWindow.style.left = '-100%';
+    });
+
+    submitButton.addEventListener('click', (e)=> {
+        e.preventDefault();
+
+        let required = false,
+            checked  = false;
+
+        if (!(nameInput.value === '' || phoneInput.value === '')) {
+            required = true;
+        }
+
+        if (checkbox.classList.contains('active')) {
+            checked = true;
+        }
+
+        if (required === false) {
+            errorWindow.style.left = '0';
+            errorMessage.innerHTML = 'Поля, которые обязательно нужно заполнить - пустые. Проверьте свои данные и попробуйте еще раз.';
+            return false;
+        } else if (checked === false) {
+            errorWindow.style.left = '0';
+            errorMessage.innerHTML = 'Перед отправкой данных вы должны согласиться на обработку персональных данных.';
+            return false;
+        } else {
+            successWindow.style.left = '0'
+        }
+
+    });
+
+    successButton.addEventListener('click', (e)=> {
+        e.preventDefault();
+        closeModal();
+    });
 
     // TIMER
     function makeTimer() {
@@ -361,27 +370,14 @@ $( document ).ready(function() {
 
     setInterval(function() { makeTimer(); }, 1000);
 
-    // FOOTER FORM
-    // let footerButton     = document.querySelector('.footer__call-form-button'),
-    //     footerNameInput  = document.querySelector('.footer__name-input'),
-    //     footerPhoneInput = document.querySelector('.footer__phone-input');
-    //
-    // footerButton.addEventListener('click', (e)=> {
-    //     e.preventDefault();
-    //
-    //     nameInput.value = footerNameInput.value;
-    //     phoneInput.value = footerPhoneInput.value;
-    //
-    //     callModal();
-    // });
-
     // TOGGLE MENU
-    // let burger = document.querySelector('.header__burger'),
-    //     nav    = document.querySelector('.nav');
-    //
-    // burger.addEventListener('click', ()=> {
-    //     nav.classList.toggle('active');
-    // });
+
+    let burger = document.querySelector('.header__burger'),
+        nav    = document.querySelector('.nav');
+
+    burger.addEventListener('click', ()=> {
+        header.classList.toggle('active');
+    });
 
 
 
