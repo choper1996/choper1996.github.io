@@ -379,7 +379,7 @@ $( document ).ready(function() {
         header.classList.toggle('active');
     });
 
-
+    AOS.init();
 
 
 });

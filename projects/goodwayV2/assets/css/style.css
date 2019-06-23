@@ -1068,7 +1068,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 97px 28px;
 }
 
-.contact__card p {
+.contact__card p, .contact__card a {
     color: #fff;
 }
 
@@ -2090,6 +2090,23 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 12px;
     }
 
+    /*MODALS*/
+    .modal form {
+        padding: 30px;
+    }
+
+    .modal-inputs-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal__error-window, .modal__success-window {
+        border: 1px solid red;
+        padding: 30px;
+    }
+
+
 }
 
 @media screen and (max-width: 575.98px) {
@@ -2216,6 +2233,15 @@ input[type=number]::-webkit-outer-spin-button {
 
     .footer button {
         left: 15px;
+    }
+
+    .modal__title {
+        max-width: 280px;
+        margin: 0 auto 50px auto;
+    }
+
+    .modal__title > br {
+        display: none;
     }
 }
 
