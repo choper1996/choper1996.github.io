@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'solution';
+    src:url('../../fonts/FuturaBookC.eot'),
+        url('../../fonts/FuturaBookC.eot') format('embedded-opentype'),
+        url('../../fonts/FuturaBookC.woff2') format('woff2'),
+        url('../../fonts/FuturaBookC.woff') format('woff'),
+        url('../../fonts/FuturaBookC.ttf') format('truetype'),
+        url('../../fonts/FuturaBookC.svg') format('svg');
+}
