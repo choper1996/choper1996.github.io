@@ -1,0 +1,267 @@
+@font-face {
+  font-family: 'Patriciana';
+  src: url('./fonts/patriciana.eot'); /* IE 9 Compatibility Mode */
+  src: url('./fonts/patriciana.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+  url('./fonts/patriciana.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./fonts/patriciana.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+  url('./fonts/patriciana.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./fonts/patriciana.svg#patriciana') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+body {
+  padding:0;
+  margin:0;
+  font-family: 'Patriciana', sans-serif;
+}
+
+h2, p {
+  letter-spacing: 0.9px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Hero */
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding:0;
+  margin:0;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 40px;
+}
+
+.hero-card {
+  background-color: rgba(167, 190, 193, 0.5);
+  position: relative;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 4px;
+}
+
+.hero p {
+  position: relative;
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+}
+
+.hero .border {
+  position: absolute;
+  width: 750px;
+}
+
+.hero .invite {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero .we {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero .date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.background-image-flower {
+  width: 37%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.background-image-flower-2 {
+  width: 37%;
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+  transform: scale(-1, 1);
+}
+
+/* Guest */
+.guest {
+  background-color: #F5F5F5;
+  text-align: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url("./img/flower-guest.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 90vh;
+}
+
+.guest_card {
+  border-radius: 4px;
+  width: 800px;
+  background: rgba(167, 190, 193, 0.85);
+  padding: 30px;
+  align-self: auto;
+  z-index: 2;
+}
+
+.guest h2 {
+  /*margin: 0 0 34px 0;*/
+  /*font-weight: 400;*/
+  font-size: 40px;
+}
+
+.guest p {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cursive {
+  font-family: 'Patriciana', sans-serif;
+}
+
+.guest .cursive {
+  font-size: 22px;
+}
+
+.guest .address {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Schedule */
+.schedule {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 40px;
+  background-image: url("./img/flower-schedule.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+.schedule h2 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.schedule-card {
+  width: 100%;
+  max-width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 30px auto 0 auto;
+}
+
+.schedule-row {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.time {
+  white-space: nowrap;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 30px;
+  font-size: 24px;
+}
+
+.event {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.description {
+  /*font-family: 'Montserrat', sans-serif;*/
+  margin: 5px 0  0 0;
+}
+
+/* Timer */
+
+.timer__items {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.timer__item:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: -15px;
+}
+
+.map {
+  width: 100%;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: 560px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.border {
+  transform-origin: center;
+  animation: rotate 60s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
