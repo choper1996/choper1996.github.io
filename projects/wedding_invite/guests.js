@@ -32,4 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   endingSpan.innerText = ending;
   unionSpan.innerText = union;
+  const map = document.querySelector("iframe");
+  console.log(map);
+
+  map.behaviors.disable('scrollZoom')
 });

@@ -52,6 +52,10 @@ canvas {
   border-radius: 4px;
 }
 
+.hero-card br {
+  display: none;
+}
+
 .hero p {
   position: relative;
   text-align: center;
@@ -190,9 +194,11 @@ canvas {
   font-family: 'Montserrat', sans-serif;
   margin-right: 30px;
   font-size: 24px;
+  margin-top: 0;
 }
 
 .event {
+  margin-top: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -256,12 +262,48 @@ canvas {
   animation: rotate 60s infinite linear;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
+.map {
+  pointer-events: none;
+  -ms-touch-action: auto !important;
+  touch-action: auto !important;
+}
+
+@media screen and (max-width: 800px) {
+  .background-image-flower, .background-image-flower-2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hero br {
+    display: inline-block;
   }
 
-  to {
-    transform: rotate(360deg);
+  .time {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .hero p, .guest h2, .schedule h2, .timer__items {
+    font-size: 30px;
+  }
+
+  .time {
+    font-size: 14px;
+  }
+
+  .event {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 419px) {
+  .hero p, .guest h2, .schedule h2, .timer__items {
+    font-size: 25px;
+  }
+
+  .timer__item {
+    min-width: 30px;
   }
 }
